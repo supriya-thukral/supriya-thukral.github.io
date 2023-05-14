@@ -1,6 +1,6 @@
-import React from 'react';
 import Button from '@material-ui/core/Button';
-import { customStyle, useStyles } from './styles';
+import React from 'react';
+import { customStyle } from './styles';
 
 interface TopNavItemProps {
     href: string;

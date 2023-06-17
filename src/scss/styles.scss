@@ -1,5 +1,5 @@
 @import '~normalize.css/normalize.css';
-
+@import '~bootstrap/dist/css/bootstrap.css';
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 $primaryColor: #4a90e2; // Blue
@@ -124,5 +124,63 @@ body {
 
     &:hover {
         background-color: darken($primaryColor, 10%);
+    }
+}
+
+.skills-section {
+    margin-top: 3rem;
+
+    h2 {
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 0;
+        margin-right: 1rem;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .skills-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skill {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        font-weight: bold;
+
+        .skill-name {
+            width: 120px;
+            margin-right: 1rem;
+        }
+
+        .custom-progress-bar {
+            flex-grow: 1;
+            height: auto;
+            background-color: #eaeaea;
+            border-radius: 6px;
+            overflow: hidden;
+
+            .custom-progress-bar-inner {
+                height: 100%;
+                background-color: #4a90e2;
+                transition: width 0.3s ease-in-out;
+                border-radius: 6px;
+            }
+        }
+    }
+
+    .skill-icon {
+        position: relative;
+        display: inline-block;
+        margin-right: 0.5rem;
+        font-size: 1.5rem;
+        color: #4a90e2;
+        cursor: pointer;
+
+        [data-tip] {
+            cursor: pointer;
+        }
     }
 }

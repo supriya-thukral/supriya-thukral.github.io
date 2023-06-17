@@ -1,7 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import '../Images/SupriyaThukral.jpg'
+import SupriyaThukral from '../Images/SupriyaThukral.jpg';
+import SkillsSection from '../Components/SkillsSection';
 
 const HomePage: React.FC = () => {
     return (
@@ -10,7 +11,7 @@ const HomePage: React.FC = () => {
                 <div className="row hero-row">
                     <div className="col-sm-3">
                         <figure>
-                            <img src={require('../Images/SupriyaThukral.jpg')} className="img-fluid rounded" alt="Supriya Thukral" />
+                            <img src={SupriyaThukral} className="img-fluid rounded" alt="Supriya Thukral" />
                         </figure>
                     </div>
                     <div className="col-sm-6 text-center">
@@ -37,6 +38,7 @@ const HomePage: React.FC = () => {
                         </div>
                     </div>
                 </div>
+                <SkillsSection />
             </section>
         </div>
     );

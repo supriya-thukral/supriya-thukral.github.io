@@ -7,17 +7,19 @@ import PortfolioPage from './Pages/Portfolio';
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <TopNav />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/portfolio" element={<PortfolioPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-        </Routes>
-      </Router>
-    </div>
+    <>
+      <div className="App">
+        <Router>
+          <TopNav />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/portfolio" element={<PortfolioPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
+        </Router>
+      </div>
+    </>
   );
 }
 

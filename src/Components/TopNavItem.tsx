@@ -1,6 +1,5 @@
-import Button from '@material-ui/core/Button';
 import React from 'react';
-import { customStyle } from './styles';
+import { Link } from 'react-router-dom';
 
 interface TopNavItemProps {
     href: string;
@@ -8,15 +7,10 @@ interface TopNavItemProps {
 }
 
 const TopNavItem: React.FC<TopNavItemProps> = ({ href, text }) => {
-    const handleItemClick = () => {
-        window.location.href = href;
-    };
-
-
     return (
-        <Button color="inherit" onClick={handleItemClick} className={customStyle().customButton} >
+        <Link to={href} className="top-nav-link">
             {text}
-        </Button>
+        </Link>
     );
 };
 

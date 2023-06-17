@@ -10,10 +10,10 @@ const TopNav: React.FC = () => {
     ];
 
     return (
-        <nav className='top-nav-container'>
+        <nav className="top-nav-container">
             {navItems.map((item) => (
-                <div className="top-nav-item">
-                    <TopNavItem key={item.href} href={item.href} text={item.text} />
+                <div className="top-nav-item" key={item.href}>
+                    <TopNavItem href={item.href} text={item.text} />
                 </div>
             ))}
         </nav>

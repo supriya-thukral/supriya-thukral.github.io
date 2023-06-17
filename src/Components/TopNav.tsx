@@ -3,10 +3,10 @@ import TopNavItem from './TopNavItem';
 
 const TopNav: React.FC = () => {
     const navItems = [
-        { href: '#home', text: 'Home' },
-        { href: '#about', text: 'About' },
-        { href: '#portfolio', text: 'Portfolio' },
-        { href: '#contact', text: 'Contact' },
+        { href: '/', text: 'Home' },
+        { href: '/about', text: 'About' },
+        { href: '/portfolio', text: 'Portfolio' },
+        { href: '/contact', text: 'Contact' },
     ];
 
     return (

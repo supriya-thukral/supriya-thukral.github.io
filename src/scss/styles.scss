@@ -1,15 +1,12 @@
 .top-nav-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     margin-top: auto;
     padding-top: 5rem;
-    float: right;
 
     .top-nav-item {
-        font-family: 'Cormorant Garamond', sans-serif;
         margin-left: 15px;
         margin-right: 15px;
-        font-size: 1.5rem;
     }
 }
 
@@ -19,5 +16,5 @@
 }
 
 body {
-    background-color: #FFFCF0;
+    background-color: #fffcf0;
 }

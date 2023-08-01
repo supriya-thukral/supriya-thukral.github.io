@@ -15,7 +15,7 @@ const HomePage: React.FC = () => {
   return (
     <PageWithChildren id="home">
       <CardComponent
-        title="Hello World!"
+        title="Hello World"
         image={headshotProps}
         imageLocation={windowSize.width <= 768 ? "left" : "right"}
       >

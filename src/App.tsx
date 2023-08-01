@@ -1,25 +1,20 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import TopNav from './Components/TopNav';
-import AboutPage from './Pages/About';
-import ContactPage from './Pages/Contact';
-import HomePage from './Pages/Home';
-import PortfolioPage from './Pages/Portfolio';
+import { BrowserRouter as Router } from "react-router-dom";
+import TopNav from "./Components/TopNav";
+import SiteContent from "./Pages/SiteContent";
+import useWindowSize from "./helpers";
+import MobileNavigation from "./Components/Mobile/MobileNavigation";
 
 function App() {
+  const windowSize = useWindowSize() || { width: 0, height: 0 };
   return (
-    <>
-      <div className="App">
-        <Router>
-          <TopNav />
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/portfolio" element={<PortfolioPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes>
-        </Router>
-      </div>
-    </>
+    <div className="App">
+      <Router>
+        {windowSize.width <= 768 ? <MobileNavigation /> : <TopNav />}
+        <div className="site-content">
+          <SiteContent />
+        </div>
+      </Router>
+    </div>
   );
 }
 

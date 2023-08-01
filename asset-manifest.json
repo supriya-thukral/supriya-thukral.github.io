@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.df780b6b.css",
-    "main.js": "/static/js/main.8ba28b47.js",
-    "static/js/787.ba197ed0.chunk.js": "/static/js/787.ba197ed0.chunk.js",
-    "static/media/Deltahacks.png": "/static/media/Deltahacks.251a399c8ee317ed3709.png",
-    "static/media/FormaLogo.png": "/static/media/FormaLogo.64a824b866885dac800b.png",
-    "static/media/SupriyaThukral.jpg": "/static/media/SupriyaThukral.096fe02b4c816e1968f9.jpg",
-    "static/media/Logo.png": "/static/media/Logo.c4cfb95a279cf266c43b.png",
-    "index.html": "/index.html",
-    "main.df780b6b.css.map": "/static/css/main.df780b6b.css.map",
-    "main.8ba28b47.js.map": "/static/js/main.8ba28b47.js.map",
-    "787.ba197ed0.chunk.js.map": "/static/js/787.ba197ed0.chunk.js.map"
+    "main.css": "/supriya-thukral.github.io/static/css/main.df780b6b.css",
+    "main.js": "/supriya-thukral.github.io/static/js/main.7bb3a2b0.js",
+    "static/js/787.ba197ed0.chunk.js": "/supriya-thukral.github.io/static/js/787.ba197ed0.chunk.js",
+    "static/media/Deltahacks.png": "/supriya-thukral.github.io/static/media/Deltahacks.251a399c8ee317ed3709.png",
+    "static/media/FormaLogo.png": "/supriya-thukral.github.io/static/media/FormaLogo.64a824b866885dac800b.png",
+    "static/media/SupriyaThukral.jpg": "/supriya-thukral.github.io/static/media/SupriyaThukral.096fe02b4c816e1968f9.jpg",
+    "static/media/Logo.png": "/supriya-thukral.github.io/static/media/Logo.c4cfb95a279cf266c43b.png",
+    "index.html": "/supriya-thukral.github.io/index.html",
+    "main.df780b6b.css.map": "/supriya-thukral.github.io/static/css/main.df780b6b.css.map",
+    "main.7bb3a2b0.js.map": "/supriya-thukral.github.io/static/js/main.7bb3a2b0.js.map",
+    "787.ba197ed0.chunk.js.map": "/supriya-thukral.github.io/static/js/787.ba197ed0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.df780b6b.css",
-    "static/js/main.8ba28b47.js"
+    "static/js/main.7bb3a2b0.js"
   ]
 }

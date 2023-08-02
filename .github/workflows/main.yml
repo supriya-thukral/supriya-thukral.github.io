@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - gh-pages
 
 jobs:
   build-and-deploy:
@@ -17,10 +18,11 @@ jobs:
         with:
           node-version: "14"
 
-      - name: Install dependencies and Build 🔧
-        run: |
-          npm install
-          npm run build
+      - name: Install dependencies 🔧
+        run: npm install
+
+      - name: Build 🚀
+        run: npm run build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.1

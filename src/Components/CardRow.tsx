@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import { ImageProps } from "./Page";
-import { Card } from "@material-ui/core";
+import { Card } from "@mui/material";
 
 interface CardProps {
   title?: string;

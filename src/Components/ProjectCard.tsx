@@ -1,10 +1,9 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { CardHeader, CardContent, Typography } from "@material-ui/core";
-import { Card } from "react-bootstrap";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
-import { Badge } from "@material-ui/core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Badge, CardContent, CardHeader, Typography } from "@mui/material";
+import React from "react";
+import { Card } from "react-bootstrap";
 
 interface ProjectCardProps {
   icon: IconProp;

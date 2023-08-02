@@ -3,6 +3,8 @@ import TopNav from "./Components/TopNav";
 import SiteContent from "./Pages/SiteContent";
 import useWindowSize from "./helpers";
 import MobileNavigation from "./Components/Mobile/MobileNavigation";
+import React from "react";
+import ReactDOM from "react-dom";
 
 function App() {
   const windowSize = useWindowSize() || { width: 0, height: 0 };

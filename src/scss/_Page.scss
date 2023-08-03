@@ -21,34 +21,36 @@
     }
   }
 }
-
 // Skills
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 20px;
-  @media (max-width: 768px) {
-    justify-content: center;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex-wrap: nowrap;
-    padding-bottom: 20px;
-    h4 {
-      padding-top: 10px;
-    }
-  }
-  div {
+.skills-section {
+  margin-bottom: 2%;
+  .skills-grid {
     display: flex;
-    align-items: center;
-    gap: 5%; /* Adds space between the icon and text. */
-    font-size: 1.2em;
-    flex-basis: calc(20% - 25px); /* Adjusted for 5 items per row. */
-    text-align: left;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    @media (max-width: 768px) {
+      justify-content: center;
+      flex-direction: column;
+      flex-basis: 100%;
+      flex-wrap: nowrap;
+      padding-bottom: 20px;
+      h4 {
+        padding-top: 10px;
+      }
+    }
+    .skills-item {
+      display: flex;
+      align-items: center;
+      gap: 5%; /* Adds space between the icon and text. */
+      font-size: 1.2em;
+      flex-basis: calc(20% - 25px); /* Adjusted for 5 items per row. */
+      text-align: left;
 
-    .fa-icon {
-      color: #89cff0;
-      justify-self: flex-start;
+      .fa-icon {
+        color: #89cff0;
+        justify-self: flex-start;
+      }
     }
   }
 }
@@ -84,6 +86,9 @@
       align-items: center;
       gap: 8px;
       margin-bottom: 8px;
+      .fa-link {
+        color: #0056b3;
+      }
     }
 
     .title-wrapper {
@@ -106,8 +111,13 @@
     }
 
     .badge {
-      margin-left: 10px;
-      margin-right: -10px;
+      margin-left: 8px;
+      margin-top: 2px;
+      font-size: 0.6em;
+      background-color: #0056b3;
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: 4px;
     }
   }
 

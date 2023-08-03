@@ -21,10 +21,9 @@ const HomePage: React.FC = () => {
       >
         <div>
           <p>
-            Hello! I'm <strong>Supriya</strong>, a{" "}
-            <strong>full-stack software developer</strong> with a robust{" "}
-            <strong>2-year professional track record</strong>. My technical
-            skill set is comprehensive, with specific expertise in{" "}
+            I'm Supriya, a <strong>full-stack software developer</strong> with a
+            robust <strong>2-year professional track record</strong>. My
+            technical skill set is comprehensive, with specific expertise in{" "}
             <strong>front-end technologies such as React</strong>, including
             libraries like <strong>Redux</strong> and <strong>Recharts</strong>,
             and <strong>TypeScript</strong>, along with{" "}
@@ -40,9 +39,18 @@ const HomePage: React.FC = () => {
             Beyond my technical contributions, I have valuable{" "}
             <strong>leadership experience</strong>, having led a{" "}
             <strong>15-member team</strong> as the Director of Sponsorship at{" "}
-            <strong>DeltaHacks</strong>. This opportunity enhanced my
-            understanding of the power of teamwork and solidified my passion for
-            leading.
+            <strong>
+              <a
+                href="https://deltahacks.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                DeltaHacks
+              </a>
+            </strong>
+            , McMaster University's largest annual hackathon. This opportunity
+            enhanced my understanding of the power of teamwork and solidified my
+            passion for leading.
           </p>
         </div>
       </CardComponent>

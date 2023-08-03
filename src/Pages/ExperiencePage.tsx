@@ -24,63 +24,56 @@ const ExperiencePage: React.FC = () => {
       <CardComponent image={formaLogoProps}>
         <h2>Working at Forma.AI</h2>
         <h3>
-          <strong>Forma.AI</strong> is a Series B startup specializing in
-          providing real-time insights into compensation to sales
-          representatives through dynamic dashboards. Being part of this
-          fast-paced startup environment has accelerated my professional growth
-          and refined both my existing and new skills.
+          <a href="https://forma.ai" target="_blank" rel="noreferrer">
+            <strong>Forma.AI</strong>
+          </a>{" "}
+          is a Series B startup specializing in providing real-time insights
+          into compensation to sales representatives through dynamic dashboards.
+          Being part of this fast-paced startup environment has accelerated my
+          professional growth and refined both my existing and new skills.
         </h3>
         <div>
-          <p>
-            As a key member of the Dashboard Team at <strong>Forma.AI</strong>,
-            I utilized my expertise in <strong>React</strong>,{" "}
-            <strong>TypeScript</strong>, and <strong>Redux</strong> to construct
-            and manage cutting-edge UI components. Efficiency and
-            maintainability were at the forefront of my development process,
-            leading to well-structured code that enhances software reliability
-            and performance.
-          </p>
-
-          <p>
-            I used <strong>SCSS</strong> and <strong>Material UI</strong> for
-            styling the components, while also writing comprehensive tests with{" "}
-            <strong>Jest</strong> to ensure code quality. My contributions to
-            creating <strong>Django</strong> models and APIs, along with my
-            active role in modifying <strong>SQL</strong> query schemas, have
-            ensured seamless integration with the Dashboard Configurator tool.
-          </p>
-
-          <p>
-            My contributions to the <strong>Dashboard Configurator</strong>{" "}
-            development in this <strong>Agile</strong> environment include:
-          </p>
-
+          As a key member of the Dashboard Team at <strong>Forma.AI</strong>, I
+          use my expertise in <strong>React</strong>,{" "}
+          <strong>TypeScript</strong>, and <strong>Redux</strong> to construct
+          and manage cutting-edge UI components. Efficiency and maintainability
+          are at the forefront of my development process, leading to
+          well-structured code that enhances software reliability and
+          performance. I use <strong>SCSS</strong> and{" "}
+          <strong>Material UI</strong> for styling the components, while also
+          writing comprehensive tests with <strong>Jest</strong> to ensure code
+          quality. My contributions to creating <strong>Django</strong> models
+          and APIs, along with my active role in modifying <strong>SQL</strong>{" "}
+          query schemas, ensure seamless integration with the Dashboard
+          Configurator tool. My contributions to the{" "}
+          <strong>Dashboard Configurator</strong> development in this{" "}
+          <strong>Agile</strong> environment include:
           <ol>
             <li>
-              <strong>Reduced Repetitive Code:</strong> Standardizing the
-              creation of dashboards reduced repetitive coding tasks, resulting
+              <strong>Reduce Repetitive Code:</strong> Standardizing the
+              creation of dashboards reduces repetitive coding tasks, resulting
               in fewer patches and fixes.
             </li>
             <li>
-              <strong>Consistent Client Experience:</strong> Standardization
-              ensures consistency across all client dashboards, leading to an
-              improved customer experience.
+              <strong>Ensure Consistent Client Experience:</strong>{" "}
+              Standardization ensures consistency across all client dashboards,
+              leading to an improved customer experience.
             </li>
             <li>
-              <strong>Empowering the Customer Team:</strong> The Dashboard
-              Configurator has made our customer team less dependent on the
+              <strong>Empower the Customer Team:</strong> The Dashboard
+              Configurator makes our customer team less dependent on the
               development team, enabling them to make modifications to
               dashboards without submitting a development request.
             </li>
             <li>
-              <strong>Faster Client Delivery:</strong> Our new process has
-              significantly improved the turnaround time for delivering
+              <strong>Deliver Dashboards Faster:</strong> Our new process
+              significantly improves the turnaround time for delivering
               dashboards to clients.
             </li>
             <li>
-              <strong>Enhanced Core Code:</strong> By spending less time
-              maintaining custom code, our developers have been able to focus
-              more on strengthening the core code.
+              <strong>Enhance Core Code:</strong> By spending less time
+              maintaining custom code, our developers can focus more on
+              strengthening the core code.
             </li>
           </ol>
         </div>
@@ -88,10 +81,13 @@ const ExperiencePage: React.FC = () => {
       <CardComponent image={deltahacksLogoProps}>
         <h2>DeltaHacks - Director of Sponsorship</h2>
         <h3>
-          DeltaHacks is an annual hackathon focused on facilitating positive
-          change across diverse domains. During January 2022 edition, I
-          spearheaded the Sponsorship Team as the Director of Sponsorship,
-          achieving unprecedented results in a fully remote and virtual setting.
+          <a href="https://deltahacks.com" target="_blank" rel="noreferrer">
+            <strong>DeltaHacks</strong>
+          </a>{" "}
+          is an annual hackathon focused on facilitating positive change across
+          diverse domains. During January 2022 edition, I spearheaded the
+          Sponsorship Team as the Director of Sponsorship, achieving
+          unprecedented results in a fully remote and virtual setting.
         </h3>
         <div>
           <p>

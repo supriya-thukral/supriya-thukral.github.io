@@ -18,7 +18,7 @@ import PageWithChildren from "../Components/PageWithChildren";
 
 const SkillItem: React.FC<{ icon: any; text: string }> = ({ icon, text }) => {
   return (
-    <div>
+    <div className="skills-item">
       <FontAwesomeIcon className="fa-icon" icon={icon} /> {text}
     </div>
   );
@@ -58,11 +58,14 @@ const SkillsPage: React.FC = () => {
     <PageWithChildren id="skills" className="skills">
       <h1>Skills</h1>
 
-      <h4>Front-End Development</h4>
-      <SkillsGrid skills={frontEndSkills} />
-
-      <h4>Back-End Development</h4>
-      <SkillsGrid skills={backEndSkills} />
+      <div className="skills-section">
+        <h4>Front-End Development</h4>
+        <SkillsGrid skills={frontEndSkills} />
+      </div>
+      <div className="skills-section">
+        <h4>Back-End Development</h4>
+        <SkillsGrid skills={backEndSkills} />
+      </div>
     </PageWithChildren>
   );
 };

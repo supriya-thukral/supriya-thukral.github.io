@@ -1,15 +1,16 @@
-import React from "react";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faCodeBranch, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
 import PageWithChildren from "../Components/PageWithChildren";
 import ProjectCard from "../Components/ProjectCard";
 
 const projectsData = [
   {
-    icon: faCodeBranch,
+    icon: faGithub,
     title: "Portfolio Website",
-    link: "https://example.com",
+    link: "https://github.com/supriya-thukral/supriya-thukral.github.io",
     description:
-      "This is my personal portfolio website that showcases my skills, projects, and experiences. It is built using React, TypeScript, and SCSS, and it features a modern and responsive design. The source code for this website is available on GitHub, and you can view the live website by clicking the link above.",
+      "This is the site you are looking at! My personal portfolio website that showcases my skills, projects, and experiences. It is built using React, TypeScript, and SCSS, and it features a modern and responsive design. The source code for this website is available on GitHub, and you can view the live website by clicking the link above. I used GitHub Actions to set up the site.",
   },
   {
     icon: faLaptopCode,

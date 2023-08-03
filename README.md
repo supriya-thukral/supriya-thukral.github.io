@@ -1,46 +1,28 @@
-# Getting Started with Create React App
+# Supriya Thukral
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hello! 👋 I'm Supriya Thukral, a full-stack software developer with a strong 2-year professional track record. I'm passionate about building clean, efficient, and reliable software solutions. My technical expertise spans across front-end and back-end technologies, and I love working with React, TypeScript, Python, Django, and more.
 
-## Available Scripts
+## About Me
 
-In the project directory, you can run:
+- 🌱 Currently learning: Writing clean and effective tests.
+- 💼 Working at: Forma.AI, a Series B startup providing real-time insights into sales compensation through dynamic dashboards.
+- 😄 Pronouns: She/Her
 
-### `npm start`
+## Projects and Experience
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Forma.AI
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Forma.AI is a fast-paced startup where I work as a key member of the Dashboard Team. My responsibilities include utilizing React, TypeScript, and Redux to build and manage cutting-edge UI components. I'm passionate about writing clean and efficient code, and I always strive for maintainability and performance.
 
-### `npm test`
+### DeltaHacks
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+At DeltaHacks, I had the privilege of leading the Sponsorship Team as the Director of Sponsorship. This role allowed me to demonstrate strategic innovation, effective leadership, and meticulous process optimization. My experience here enhanced my understanding of project and team management, complementing my technical skills.
 
-### `npm run build`
+## Skills
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Front-End Development: React, TypeScript, Redux, SCSS, Material UI, Jest
+- Back-End Development: Python, Django, SQL, Postgres
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Connect with Me
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Feel free to reach out to me via email at supriyathukral@hotmail.com. I'm always open to exciting collaboration opportunities and discussions about software development.

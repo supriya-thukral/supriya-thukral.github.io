@@ -6,7 +6,12 @@ const Footer: React.FC = () => {
       <div className="footer-content">
         <div className="left-content">
           <h3>Contact Information</h3>
-          <p>Email: supriyathukral@hotmail.com</p>
+          <p>
+            Email:{" "}
+            <a href="mailto:supriyathukral@hotmail.com">
+              supriyathukral@hotmail.com
+            </a>
+          </p>
         </div>
         <div className="right-content">
           <p>Made with ❤️ by Supriya Thukral</p>

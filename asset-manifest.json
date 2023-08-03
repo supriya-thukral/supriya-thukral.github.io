@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.546a5f1a.css",
-    "main.js": "/static/js/main.c5a0c746.js",
+    "main.js": "/static/js/main.215666a5.js",
     "static/js/787.ba197ed0.chunk.js": "/static/js/787.ba197ed0.chunk.js",
     "static/media/Deltahacks.png": "/static/media/Deltahacks.251a399c8ee317ed3709.png",
     "static/media/FormaLogo.png": "/static/media/FormaLogo.64a824b866885dac800b.png",
@@ -9,11 +9,11 @@
     "static/media/Logo.png": "/static/media/Logo.c4cfb95a279cf266c43b.png",
     "index.html": "/index.html",
     "main.546a5f1a.css.map": "/static/css/main.546a5f1a.css.map",
-    "main.c5a0c746.js.map": "/static/js/main.c5a0c746.js.map",
+    "main.215666a5.js.map": "/static/js/main.215666a5.js.map",
     "787.ba197ed0.chunk.js.map": "/static/js/787.ba197ed0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.546a5f1a.css",
-    "static/js/main.c5a0c746.js"
+    "static/js/main.215666a5.js"
   ]
 }

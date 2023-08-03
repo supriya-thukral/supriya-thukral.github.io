@@ -22,7 +22,7 @@ const projectsData = [
   {
     icon: faCodeBranch,
     title: "Open Source Website Portfolio Template",
-    link: "https://github.com/example",
+    link: "https://github.com/supriya-thukral/React-Portfolio-Template",
     description:
       "This project is an open-source website portfolio template that allows users to easily create their own portfolio websites. It is a work-in-progress (WIP) and is built using React, TypeScript, and SCSS. The goal of this project is to provide developers with a customizable and modern template to showcase their skills and projects.",
     badge: "WIP",

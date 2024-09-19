@@ -1,4 +1,3 @@
-import "pure-react-carousel/dist/react-carousel.es.css";
 import React from "react";
 import deltahacksLogo from "../Assets/Images/Deltahacks.png";
 import formaLogo from "../Assets/Images/FormaLogo.png";

@@ -3,6 +3,7 @@ import {
   faPython,
   faReact,
   faSass,
+  IconDefinition,
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faCodeBranch,
@@ -16,7 +17,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import PageWithChildren from "../Components/PageWithChildren";
 
-const SkillItem: React.FC<{ icon: any; text: string }> = ({ icon, text }) => {
+const SkillItem: React.FC<{ icon: IconDefinition; text: string }> = ({
+  icon,
+  text,
+}) => {
   return (
     <div className="skills-item">
       <FontAwesomeIcon className="fa-icon" icon={icon} /> {text}
@@ -24,9 +28,9 @@ const SkillItem: React.FC<{ icon: any; text: string }> = ({ icon, text }) => {
   );
 };
 
-const SkillsGrid: React.FC<{ skills: { icon: any; text: string }[] }> = ({
-  skills,
-}) => {
+const SkillsGrid: React.FC<{
+  skills: { icon: IconDefinition; text: string }[];
+}> = ({ skills }) => {
   return (
     <div className="skills-grid">
       {skills.map((skill) => (

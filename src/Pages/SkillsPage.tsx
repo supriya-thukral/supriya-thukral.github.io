@@ -15,28 +15,55 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { Typography, Box, Grid2 } from "@mui/material";
 import PageWithChildren from "../Components/PageWithChildren";
 
-const SkillItem: React.FC<{ icon: IconDefinition; text: string }> = ({
-  icon,
-  text,
-}) => {
+interface SkillItemProps {
+  icon: IconDefinition;
+  text: string;
+}
+
+const SkillItem: React.FC<SkillItemProps> = ({ icon, text }) => {
   return (
-    <div className="skills-item">
-      <FontAwesomeIcon className="fa-icon" icon={icon} /> {text}
-    </div>
+    <Box
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        gap: 2,
+        fontSize: "2em",
+        textAlign: "left",
+      }}
+    >
+      <FontAwesomeIcon
+        className="fa-icon"
+        icon={icon}
+        style={{ color: "#89cff0" }}
+      />{" "}
+      <Typography variant="body1">{text}</Typography>
+    </Box>
   );
 };
 
-const SkillsGrid: React.FC<{
+interface SkillsGridProps {
   skills: { icon: IconDefinition; text: string }[];
-}> = ({ skills }) => {
+}
+
+const SkillsGrid: React.FC<SkillsGridProps> = ({ skills }) => {
   return (
-    <div className="skills-grid">
+    <Grid2
+      container
+      spacing={3}
+      sx={{
+        justifyContent: { xs: "center", sm: "flex-start" },
+        paddingBottom: "20px",
+      }}
+    >
       {skills.map((skill) => (
-        <SkillItem key={skill.text} icon={skill.icon} text={skill.text} />
+        <Grid2 key={skill.text}>
+          <SkillItem icon={skill.icon} text={skill.text} />
+        </Grid2>
       ))}
-    </div>
+    </Grid2>
   );
 };
 
@@ -60,16 +87,23 @@ const SkillsPage: React.FC = () => {
 
   return (
     <PageWithChildren id="skills" className="skills">
-      <h1>Skills</h1>
+      <Typography variant="h1" gutterBottom>
+        Skills
+      </Typography>
 
-      <div className="skills-section">
-        <h4>Front-End Development</h4>
+      <Box sx={{ mb: 4 }}>
+        <Typography variant="h2" gutterBottom>
+          Front-End Development
+        </Typography>
         <SkillsGrid skills={frontEndSkills} />
-      </div>
-      <div className="skills-section">
-        <h4>Back-End Development</h4>
+      </Box>
+
+      <Box sx={{ mb: 4 }}>
+        <Typography variant="h2" gutterBottom>
+          Back-End Development
+        </Typography>
         <SkillsGrid skills={backEndSkills} />
-      </div>
+      </Box>
     </PageWithChildren>
   );
 };

@@ -1,7 +1,14 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Badge, Card, CardContent, CardHeader } from "@mui/material";
+import {
+  Badge,
+  Card,
+  CardContent,
+  CardHeader,
+  Grid2,
+  Typography,
+} from "@mui/material";
 import React from "react";
 
 interface ProjectCardProps {
@@ -35,41 +42,45 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   const boldDescription = () => {
     const words = description.split(" ");
-    return words.map((word) => {
+    return words.map((word, index) => {
       const isKeyword = boldKeywords.some((keyword) =>
         word.toLowerCase().includes(keyword.toLowerCase()),
       );
-      return isKeyword ? <b>{word} </b> : word + " ";
+      return isKeyword ? <b key={index}>{word} </b> : word + " ";
     });
   };
 
   return (
-    <Card className="project custom-card-width">
+    <Card sx={{ boxShadow: 3, borderRadius: 2, position: "relative" }}>
       <CardHeader
         title={
-          <>
-            <div className="header-content">
-              <FontAwesomeIcon icon={icon} />
-              <div className="title-wrapper">
-                <span className="title">
-                  {title}
-                  {badge && (
-                    <Badge
-                      color="primary"
-                      className="badge"
-                      badgeContent={badge}
-                    ></Badge>
-                  )}
-                </span>
-                <a href={link} target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon icon={faLink} className="fa-link" />
-                </a>
-              </div>
-            </div>
-          </>
+          <Grid2 container alignItems="center" justifyContent="space-between">
+            <Grid2 size={{ xs: 10 }} container alignItems="center" spacing={1}>
+              <Grid2>
+                <FontAwesomeIcon icon={icon} size="lg" />
+              </Grid2>
+              <Grid2>
+                <Typography variant="h6">{title}</Typography>
+              </Grid2>
+            </Grid2>
+
+            <Grid2 size={{ xs: 2 }} container justifyContent="flex-end" gap={4}>
+              <a href={link} target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faLink} size="sm" />
+              </a>
+              {badge && (
+                <Grid2>
+                  <Badge color="primary" badgeContent={badge} />
+                </Grid2>
+              )}
+            </Grid2>
+          </Grid2>
         }
+        sx={{ paddingBottom: 0 }}
       />
-      <CardContent>{boldDescription()}</CardContent>
+      <CardContent>
+        <Typography variant="body2">{boldDescription()}</Typography>
+      </CardContent>
     </Card>
   );
 };

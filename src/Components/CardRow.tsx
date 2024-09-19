@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
+import { Card, CardContent, CardMedia, Typography, Box } from "@mui/material";
 import { ImageProps } from "./Page";
-import { Card } from "@mui/material";
 
 interface CardProps {
   title?: string;
@@ -11,11 +11,11 @@ interface CardProps {
 }
 
 /**
- * Card component
+ * CardComponent
  * This component is used to display a card with an image and text
  * @param title - The title of the card
  * @param imageLocation - The location of the image (left or right)
- * @returns
+ * @returns A card component
  */
 const CardComponent: React.FC<CardProps> = ({
   title,
@@ -24,28 +24,67 @@ const CardComponent: React.FC<CardProps> = ({
   children,
   imageLocation = "left",
 }) => {
-  const imageElement = image && (
-    <div className="col-md-6 d-flex align-items-center justify-content-center">
-      <img src={image.src} alt={image.alt} className={image.className} />
-    </div>
-  );
-
-  const contentElement = (
-    <div className="col-md-6">
-      <div className="card-content">
-        <h1 className="title">{title}</h1>
-        <div className="card-children">{children}</div>
-      </div>
-    </div>
-  );
+  const hasImage = !!image;
 
   return (
-    <Card className={className}>
-      <div className="row">
-        {imageLocation === "left" && imageElement}
-        {contentElement}
-        {imageLocation === "right" && imageElement}
-      </div>
+    <Card
+      className={className}
+      sx={{
+        display: "flex",
+        flexDirection: {
+          xs: "column",
+          sm: imageLocation === "right" ? "row-reverse" : "row",
+        },
+        boxShadow: "none",
+        borderRadius: 0,
+        mb: 4,
+      }}
+    >
+      {hasImage && (
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: { xs: "100%", sm: "30%" },
+            overflow: "hidden",
+            padding: 2,
+          }}
+        >
+          <CardMedia
+            component="img"
+            image={image.src}
+            alt={image.alt}
+            sx={{
+              width: "100%",
+              height: "auto",
+              objectFit: "contain",
+              transition: "transform 0.3s ease, box-shadow 0.3s ease",
+              boxShadow: 3,
+              "&:hover": {
+                transform: "scale(1.05)",
+                boxShadow: 6,
+              },
+            }}
+          />
+        </Box>
+      )}
+      <CardContent
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          padding: "1%",
+          width: { xs: "100%", sm: "70%" },
+        }}
+      >
+        {title && (
+          <Typography variant="h5" gutterBottom>
+            {title}
+          </Typography>
+        )}
+        <Box>{children}</Box>
+      </CardContent>
     </Card>
   );
 };

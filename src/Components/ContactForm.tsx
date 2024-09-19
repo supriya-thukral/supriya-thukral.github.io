@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { TextField, Button, Box } from "@mui/material";
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -8,7 +9,7 @@ const ContactForm: React.FC = () => {
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
@@ -20,39 +21,48 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="contact-form-container">
-      <form className="contact-form">
-        <label>
-          Name:
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Email:
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Message:
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-          />
-        </label>
-        <button type="button" onClick={handleFormSubmit}>
-          Submit
-        </button>
-      </form>
-    </div>
+    <Box
+      component="form"
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        gap: 3,
+        width: { xs: "100%", sm: "600px" },
+        padding: 4,
+        margin: "0 auto",
+      }}
+    >
+      <TextField
+        label="Name"
+        variant="outlined"
+        name="name"
+        value={formData.name}
+        onChange={handleChange}
+        fullWidth
+      />
+      <TextField
+        label="Email"
+        variant="outlined"
+        name="email"
+        value={formData.email}
+        onChange={handleChange}
+        fullWidth
+        type="email"
+      />
+      <TextField
+        label="Message"
+        variant="outlined"
+        name="message"
+        value={formData.message}
+        onChange={handleChange}
+        fullWidth
+        multiline
+        rows={4}
+      />
+      <Button variant="contained" color="primary" onClick={handleFormSubmit}>
+        Submit
+      </Button>
+    </Box>
   );
 };
 

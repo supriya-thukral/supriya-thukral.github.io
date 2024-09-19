@@ -1,6 +1,7 @@
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faCodeBranch, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
+import { Typography, Box, Grid2 } from "@mui/material";
 import PageWithChildren from "../Components/PageWithChildren";
 import ProjectCard from "../Components/ProjectCard";
 
@@ -32,21 +33,24 @@ const projectsData = [
 const ProjectsPage: React.FC = () => {
   return (
     <PageWithChildren id="projects" className="projects">
-      <h1>Projects</h1>
-      <section>
-        <div className="projects-container">
+      <Typography variant="h1" gutterBottom>
+        Projects
+      </Typography>
+      <Box>
+        <Grid2 container spacing={4}>
           {projectsData.map((project) => (
-            <ProjectCard
-              key={project.title}
-              icon={project.icon}
-              title={project.title}
-              link={project.link}
-              description={project.description}
-              badge={project.badge}
-            />
+            <Grid2 key={project.title} size={{ md: 6, sm: 12 }}>
+              <ProjectCard
+                icon={project.icon}
+                title={project.title}
+                link={project.link}
+                description={project.description}
+                badge={project.badge}
+              />
+            </Grid2>
           ))}
-        </div>
-      </section>
+        </Grid2>
+      </Box>
     </PageWithChildren>
   );
 };

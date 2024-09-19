@@ -1,4 +1,5 @@
 name: Build and Deploy
+
 on:
   push:
     branches:
@@ -10,23 +11,38 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Checkout the repository
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1
 
+      # Step 2: Set up Node.js with the correct version
       - name: Install Node.js and npm
-        uses: actions/setup-node@v2.4.1
+        uses: actions/setup-node@v2
         with:
-          node-version: "14"
+          node-version: "18"
 
+      # Step 3: Cache Yarn dependencies for faster builds
+      - name: Cache Yarn dependencies
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.yarn/cache
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      # Step 4: Install dependencies using Yarn
       - name: Install dependencies 🔧
         run: yarn install
 
+      # Step 5: Build the project
       - name: Build 🚀
-        run: yarn dev
+        run: yarn build
 
+      # Step 6: Deploy to GitHub Pages
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.1
+        uses: JamesIves/github-pages-deploy-action@v4.1.1
         with:
           branch: gh-pages
-          folder: build
+          folder: dist
           token: ${{ secrets.GITHUB_TOKEN }}

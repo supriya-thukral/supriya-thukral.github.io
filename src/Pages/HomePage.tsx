@@ -39,7 +39,7 @@ const HomePage: React.FC = () => {
         <Box sx={{ mt: 2 }}>
           <Typography variant="body1" paragraph>
             I'm Supriya, a <strong>full-stack software developer</strong> with{" "}
-            {experience} years of experience and a
+            {experience} of experience and a
             <strong>
               {" "}
               proven track record of delivering impactful solutions

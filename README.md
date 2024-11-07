@@ -25,6 +25,6 @@ At DeltaHacks, I had the privilege of leading the Sponsorship Team as the Direct
 
 ## Connect with Me
 
-Feel free to reach out to me via email at supriyathukral@hotmail.com. I'm always open to exciting collaboration opportunities and discussions about software development.
+Feel free to reach out to me via email at hello@supriyathukral.com. I'm always open to exciting collaboration opportunities and discussions about software development.
 
 View my portfolio website here: [supriya-thukral.github.io](https://supriya-thukral.github.io)

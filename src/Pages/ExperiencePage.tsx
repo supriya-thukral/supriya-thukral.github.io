@@ -1,6 +1,7 @@
 import React from "react";
 import deltahacksLogo from "../Assets/Images/Deltahacks.png";
 import formaLogo from "../Assets/Images/FormaLogo.png";
+import rubiconLogo from "../Assets/Images/Rubicon.png";
 import CardComponent from "../Components/CardRow";
 import { ImageProps } from "../Components/Page";
 import PageWithChildren from "../Components/PageWithChildren";
@@ -19,11 +20,82 @@ const ExperiencePage: React.FC = () => {
     className: "round-image",
   };
 
+  const rubiconLogoProps: ImageProps = {
+    src: rubiconLogo,
+    alt: "Rubicon Logo",
+    className: "rectangle-image",
+  };
+
   return (
     <PageWithChildren className="experience" id="experience">
       <Typography variant="h1" gutterBottom>
         Projects and Experience
       </Typography>
+
+      <CardComponent image={rubiconLogoProps}>
+        <Typography variant="h2" gutterBottom>
+          Full-Stack Software Developer (Lead Frontend) at Rubicon
+        </Typography>
+        <Typography variant="body1">
+          Rubicon creates applications for law enforcement, focusing on
+          efficient reporting tools and enhanced user experiences.
+        </Typography>
+        <ol>
+          <li>
+            <Typography variant="body1" component="span">
+              <strong>Automated PDF Processing:</strong> Reduced processing time
+              by 85% from 20 minutes to 3-5 minutes with an end-to-end PDF
+              upload feature. Integrated Python, OpenAPI, and Postgres with
+              Lottie animations for user feedback.
+            </Typography>
+          </li>
+          <li>
+            <Typography variant="body1" component="span">
+              <strong>CitizenEngage Tool:</strong> Created a CitizenEngage
+              interface, facilitating easy report filing with Twilio
+              notifications. Implemented with Rust APIs, React, TypeScript, and
+              MUI.
+            </Typography>
+          </li>
+          <li>
+            <Typography variant="body1" component="span">
+              <strong>UI Enhancements:</strong> Revamped the platform's UI,
+              implementing a Google-like search, interactive Google Maps
+              integrations, and a slide-out drawer for crime bulletin browsing,
+              utilizing MUI and SASS.
+            </Typography>
+          </li>
+          <li>
+            <Typography variant="body1" component="span">
+              <strong>Performance Optimization:</strong> Reduced load times
+              significantly by implementing asset loading optimizations,
+              background loading, and react-query, enhancing the user experience
+              with near-instantaneous loading.
+            </Typography>
+          </li>
+          <li>
+            <Typography variant="body1" component="span">
+              <strong>Feature Flag System:</strong> Implemented a feature
+              flagging system on the frontend, using Docker scripts, Husky,
+              ESLint, and Vitest to improve development and minimize errors.
+            </Typography>
+          </li>
+          <li>
+            <Typography variant="body1" component="span">
+              <strong>Expanded Product Access:</strong> Designed a read-only
+              mode for non-paying users, supporting conversions by allowing free
+              trials.
+            </Typography>
+          </li>
+          <li>
+            <Typography variant="body1" component="span">
+              <strong>Live Representation at IACP:</strong> Represented Rubicon
+              at IACP, showcasing the tool's public safety benefits and engaging
+              with industry leaders.
+            </Typography>
+          </li>
+        </ol>
+      </CardComponent>
 
       <CardComponent image={formaLogoProps}>
         <Typography variant="h2" gutterBottom>
@@ -97,7 +169,10 @@ const ExperiencePage: React.FC = () => {
         </ol>
       </CardComponent>
 
-      <CardComponent image={deltahacksLogoProps}>
+      <CardComponent
+        image={deltahacksLogoProps}
+        className={deltahacksLogoProps.className}
+      >
         <Typography variant="h2" gutterBottom>
           DeltaHacks - Director of Sponsorship
         </Typography>

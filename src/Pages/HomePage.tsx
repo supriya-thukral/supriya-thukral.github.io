@@ -38,26 +38,38 @@ const HomePage: React.FC = () => {
       >
         <Box sx={{ mt: 2 }}>
           <Typography variant="body1" paragraph>
-            I'm Supriya, a <strong>full-stack software developer</strong> with{" "}
-            <strong>{experience} of professional track record</strong>. My
-            technical skill set is comprehensive, with specific expertise in{" "}
-            <strong>front-end technologies such as React</strong>, including
+            I'm Supriya, a <strong>full-stack software developer</strong> with a
+            <strong>
+              {" "}
+              proven track record of delivering impactful solutions
+            </strong>
+            . My expertise spans both{" "}
+            <strong>front-end and back-end technologies</strong>, with a focus
+            on optimizing user experience and efficiency.
+          </Typography>
+
+          <Typography variant="body1" paragraph>
+            My core technical strengths include <strong>React</strong> and
             libraries like <strong>Redux</strong> and <strong>Recharts</strong>,
-            and <strong>TypeScript</strong>, along with{" "}
-            <strong>back-end proficiency in Python, Django, and SQL</strong>.
+            with <strong>TypeScript</strong> for robust front-end development. I
+            also bring strong{" "}
+            <strong>back-end skills in Python, Django, SQL, and Rust</strong>,
+            ensuring seamless integration and data management across projects.
           </Typography>
 
           <Typography variant="body1" paragraph>
-            Complemented by my experience with testing frameworks like{" "}
-            <strong>Jest</strong>, I am committed to delivering{" "}
-            <strong>efficient, clean, and robust code</strong> that contributes
-            to the creation of reliable software solutions.
+            I emphasize <strong>clean, maintainable code</strong> and adhere to
+            best practices in code quality, leveraging tools like{" "}
+            <strong>Jest, Vitest, ESLint, and Docker</strong>. My experience
+            also includes setting up robust CI/CD pipelines and implementing
+            scalable solutions that enhance both performance and user
+            engagement.
           </Typography>
 
           <Typography variant="body1" paragraph>
-            Beyond my technical contributions, I have valuable{" "}
-            <strong>leadership experience</strong>, having led a{" "}
-            <strong>15-member team</strong> as the Director of Sponsorship at{" "}
+            Beyond technical work, I bring valuable{" "}
+            <strong>leadership skills</strong> to the table. As the Director of
+            Sponsorship at{" "}
             <strong>
               <a
                 href="https://deltahacks.com/"
@@ -67,9 +79,9 @@ const HomePage: React.FC = () => {
                 DeltaHacks
               </a>
             </strong>
-            , McMaster University's largest annual hackathon. This opportunity
-            enhanced my understanding of the power of teamwork and solidified my
-            passion for leading.
+            , McMaster University's largest annual hackathon, I led a team of
+            15, securing over $20,000 in sponsorships and managing high-stakes
+            partnerships.
           </Typography>
         </Box>
       </CardComponent>

@@ -21,8 +21,8 @@ const Footer: React.FC = () => {
           </Typography>
           <Typography variant="body1" color="text.secondary">
             Email:{" "}
-            <Link href="mailto:supriyathukral@hotmail.com" underline="hover">
-              supriyathukral@hotmail.com
+            <Link href="mailto:hello@supriyathukral.com" underline="hover">
+              hello@supriyathukral.com
             </Link>
           </Typography>
         </Box>

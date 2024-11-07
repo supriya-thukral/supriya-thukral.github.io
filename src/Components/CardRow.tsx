@@ -55,15 +55,19 @@ const CardComponent: React.FC<CardProps> = ({
             component="img"
             image={image.src}
             alt={image.alt}
+            className={className}
             sx={{
               width: "100%",
               height: "auto",
-              objectFit: "contain",
+              objectFit: "cover",
+              objectPosition: "center",
               transition: "transform 0.3s ease, box-shadow 0.3s ease",
-              boxShadow: 3,
+              boxShadow: className === "round-image" ? 0 : 3,
+              borderRadius: className === "round-image" ? "50%" : 0,
+              aspectRatio: className === "round-image" ? "1 / 1" : undefined,
               "&:hover": {
                 transform: "scale(1.05)",
-                boxShadow: 6,
+                boxShadow: className === "round-image" ? 0 : 6,
               },
             }}
           />

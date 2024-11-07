@@ -3,6 +3,7 @@ import {
   faPython,
   faReact,
   faSass,
+  faRust,
   IconDefinition,
 } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -12,6 +13,9 @@ import {
   faPalette,
   faServer,
   faVial,
+  faCloud,
+  faCode,
+  faCogs,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
@@ -75,7 +79,7 @@ const SkillsPage: React.FC = () => {
     { icon: faCodeBranch, text: "Redux" },
     { icon: faSass, text: "SCSS" },
     { icon: faPalette, text: "Material UI" },
-    { icon: faVial, text: "Jest" },
+    { icon: faVial, text: "Jest & Vitest" },
   ];
 
   const backEndSkills = [
@@ -83,6 +87,14 @@ const SkillsPage: React.FC = () => {
     { icon: faServer, text: "Django" },
     { icon: faDatabase, text: "SQL" },
     { icon: faDatabase, text: "Postgres" },
+    { icon: faRust, text: "Rust" },
+  ];
+
+  const toolsSkills = [
+    { icon: faCloud, text: "AWS" },
+    { icon: faCode, text: "OpenAPI" },
+    { icon: faCogs, text: "Docker" },
+    { icon: faVial, text: "CI/CD" },
   ];
 
   return (
@@ -103,6 +115,13 @@ const SkillsPage: React.FC = () => {
           Back-End Development
         </Typography>
         <SkillsGrid skills={backEndSkills} />
+      </Box>
+
+      <Box sx={{ mb: 4 }}>
+        <Typography variant="h2" gutterBottom>
+          Tools and Platforms
+        </Typography>
+        <SkillsGrid skills={toolsSkills} />
       </Box>
     </PageWithChildren>
   );

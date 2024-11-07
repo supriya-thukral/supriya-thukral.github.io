@@ -1,10 +1,14 @@
 .round-image,
 .rectangle-image {
   width: 100%;
-  height: auto; // Maintain the aspect ratio
+  height: auto;
   border: 5px solid #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.2s ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   img {
     width: 100%;
@@ -19,22 +23,20 @@
 }
 
 .round-image {
+  aspect-ratio: 1 / 1;
   margin: 20px;
   border-radius: 50%;
 
   @media (max-width: 768px) {
-    margin: 10px 0; // Reduce the margin on mobile
+    margin: 10px 0;
   }
 }
 
 .rectangle-image {
-  margin-right: 20px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  margin-left: 20px;
+  margin: 20px;
   border-radius: 0;
 
   @media (max-width: 768px) {
-    margin: 10px 0; // Remove side margins on mobile
+    margin: 10px 0;
   }
 }

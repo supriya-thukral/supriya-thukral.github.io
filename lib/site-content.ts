@@ -1,51 +1,32 @@
-export const NAV_ITEMS = {
-  HOME: "Home",
-  EXPERIENCE: "Experience",
-  PROJECTS: "Projects",
-  SKILLS: "Skills",
-  EDUCATION: "Education",
-  CONTACT: "Contact",
-} as const;
-
-export const NAV_SECTION_IDS = [
-  "home",
-  "experience",
-  "projects",
-  "skills",
-  "contact",
+export const navItems = [
+  { id: "home", label: "Home" },
+  { id: "experience", label: "Experience" },
+  { id: "projects", label: "Projects" },
+  { id: "skills", label: "Skills" },
+  { id: "education", label: "Education" },
+  { id: "contact", label: "Contact" },
 ] as const;
 
-export const HERO_CONTENT = {
-  TITLE: "Product-minded software developer building tools for real workflows.",
-  SUBTITLE:
+export const heroContent = {
+  title: "Product-minded software developer building tools for real workflows.",
+  subtitle:
     "I’m Supriya, a full-stack software developer and small business owner. I build workflow tools across SaaS, public safety, and creative business operations, with a focus on turning messy, real-world processes into clear product experiences.",
-  CALLOUTS: [
+  chips: [
     "0-to-1 product builder",
     "Small business operator",
     "Full-stack execution",
+    "AI-assisted building",
   ],
-  PRIMARY_CTA: "View Experience",
-  SECONDARY_CTA: "Contact Me",
-} as const;
+};
 
-export const ABOUT_CONTENT = {
-  TITLE: "How I Build",
-  PARAGRAPHS: [
-    "My path into product has been hands-on. At Rubicon, I built workflow tools for public safety teams working in complex, high-pressure environments. Through Burlington Photo Booth and my previous wedding photography business, I learned what it feels like to run a small business, sell online, explain an offer clearly, manage customers, and deal with messy operations behind the scenes.",
-    "I’m now building Parva, a pre-launch CRM for creative service businesses, to bring those experiences together. The product is shaped by real workflow pain: scattered client details, manual follow-ups, disconnected files, and communication spread across too many tools.",
-  ],
-} as const;
+export const aboutParagraphs = [
+  "My path into product has been hands-on. At Rubicon, I built workflow tools for public safety teams working in complex, high-pressure environments. Through Burlington Photo Booth and my previous wedding photography business, I learned what it feels like to run a small business, sell online, explain an offer clearly, manage customers, and deal with messy operations behind the scenes.",
+  "I’m now building Parva, a pre-launch CRM for creative service businesses, to bring those experiences together. The product is shaped by real workflow pain: scattered client details, manual follow-ups, disconnected files, and communication spread across too many tools.",
+];
 
-export interface ExperienceItem {
-  title: string;
-  subtitle: string;
-  description: string;
-  bullets?: string[];
-  tags?: string[];
-}
-
-export const EXPERIENCE_ITEMS: ExperienceItem[] = [
+export const experienceItems = [
   {
+    label: "0-to-1 Product",
     title: "Founder & Product Engineer, Parva",
     subtitle:
       "Pre-launch CRM for creative service businesses | March 2025 – Present",
@@ -57,14 +38,12 @@ export const EXPERIENCE_ITEMS: ExperienceItem[] = [
       "Built the full-stack application using Next.js, React, Node.js, Python, PostgreSQL, and AWS.",
       "Used Cursor and AI-assisted workflows to prototype faster while keeping product judgment, constraints, and tradeoffs human-led.",
     ],
-    tags: [
-      "Product thinking",
-      "Workflow design",
-      "AWS",
-      "AI-assisted building",
-    ],
+    tags: ["Product thinking", "Workflow design", "AWS", "AI-assisted building"],
+    whatThisShows: "Product judgment, MVP scoping, and full-stack execution.",
+    featured: true,
   },
   {
+    label: "Shipped Workflow Tool",
     title: "Full-Stack Software Developer (Lead Frontend), Rubicon",
     subtitle: "Public safety workflow tools | Sep 2023 – Jan 2025",
     description:
@@ -77,8 +56,11 @@ export const EXPERIENCE_ITEMS: ExperienceItem[] = [
       "Reduced app load time from 120 seconds to under 5 seconds through background loading, asset optimization, and endpoint improvements.",
     ],
     tags: ["Workflow design", "React", "TypeScript", "Public safety"],
+    whatThisShows: "Workflow design in high-pressure operational environments.",
+    featured: true,
   },
   {
+    label: "Small Business Operations",
     title: "Co-Founder & Small Business Owner, Burlington Photo Booth",
     subtitle: "Premium event photo booth business | June 2023 – Present",
     description:
@@ -90,8 +72,10 @@ export const EXPERIENCE_ITEMS: ExperienceItem[] = [
       "Translated firsthand business operations into Parva product decisions around client management, project workflows, communication history, and file delivery.",
     ],
     tags: ["Small business", "Customer empathy", "Workflow design"],
+    whatThisShows: "Merchant empathy and operator insight from real operations.",
   },
   {
+    label: "Internal Platform Tools",
     title: "Full-Stack Software Developer, Forma.ai",
     subtitle: "Sales compensation platform | May 2022 – Aug 2023",
     description:
@@ -101,18 +85,56 @@ export const EXPERIENCE_ITEMS: ExperienceItem[] = [
       "Reduced dashboard creation time from 6 months to 2 months by building standardized templates and self-service configuration tooling.",
       "Collaborated with engineers, customer-facing teams, and product stakeholders during sprint planning, code reviews, and architecture discussions.",
     ],
+    whatThisShows: "Platform thinking and operational leverage for teams.",
   },
   {
+    label: "Team Operations",
     title: "Director of Sponsorship, DeltaHacks",
     subtitle: "McMaster annual hackathon",
     description:
       "Led sponsorship strategy for McMaster’s annual hackathon, securing over $20,000 in sponsorships and coordinating partnerships with tech companies during a fully remote event.",
+    bullets: [
+      "Developed sponsorship outreach and partner communication workflows.",
+      "Coordinated sponsor relationships while leading a distributed student team.",
+      "Built process assets that made sponsorship execution clearer and repeatable.",
+    ],
+    whatThisShows: "Cross-functional planning and structured execution under constraints.",
   },
-];
+] as const;
 
-export const SKILLS_GROUPS = [
+export const projects = [
   {
-    title: "Product & Builder Skills",
+    label: "Product in progress",
+    title: "Parva",
+    problem:
+      "Creative businesses manage client details, messages, files, and follow-ups across too many places.",
+    built:
+      "Pre-launch CRM workflows for intake, projects, communication, and file delivery.",
+    tags: ["Next.js", "React", "Node.js", "Python", "PostgreSQL"],
+  },
+  {
+    label: "Shipped workflow tool",
+    title: "rubiMESSAGE",
+    problem:
+      "Non-emergency calltakers needed to clear phone lines while routing citizens to the correct report.",
+    built:
+      "SMS workflow for sending the right report link during a live call.",
+    tags: ["React", "TypeScript", "Rust APIs", "Workflow Design"],
+  },
+  {
+    label: "Commerce friction",
+    title: "Photo Booth Package-Fit Tool",
+    problem:
+      "Event clients were unsure which package, active hours, and paused time they needed.",
+    built:
+      "Decision-support tool that helps clients understand package fit and estimated cost.",
+    tags: ["Client Intake", "Commerce", "Workflow Design", "Small Business"],
+  },
+] as const;
+
+export const skillGroups = [
+  {
+    title: "Product Judgment",
     skills: [
       "Product management",
       "MVP scoping",
@@ -120,104 +142,27 @@ export const SKILLS_GROUPS = [
       "Problem discovery",
       "Prototyping",
       "Technical tradeoffs",
-      "Customer and user empathy",
+      "Customer empathy",
     ],
   },
   {
-    title: "Frontend",
-    skills: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "Material UI",
-      "Tailwind CSS",
-      "ShadCN",
-    ],
+    title: "Frontend Execution",
+    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "ShadCN"],
   },
   {
     title: "Backend & Data",
-    skills: [
-      "Node.js",
-      "Python",
-      "Django",
-      "SQL",
-      "PostgreSQL",
-      "Rust",
-    ],
+    skills: ["Node.js", "Python", "Django", "SQL", "PostgreSQL", "Rust"],
   },
   {
-    title: "Tools",
+    title: "AI / Tools",
     skills: [
+      "AI-assisted prototyping",
+      "Cursor",
       "AWS",
       "Git",
       "GitHub Actions",
-      "Cursor",
       "Jest",
       "OpenAPI",
     ],
   },
 ] as const;
-
-export interface ProjectItem {
-  title: string;
-  description: string;
-  tags: string[];
-  link?: string;
-  whatItShows?: string;
-}
-
-export const PROJECT_ITEMS: ProjectItem[] = [
-  {
-    title: "Parva",
-    description:
-      "A pre-launch CRM for creative service businesses that centralizes client intake, project communication, and file delivery. Built from firsthand experience running a service business and seeing how quickly client details, notes, follow-ups, and files become scattered.",
-    tags: [
-      "Next.js",
-      "React",
-      "Node.js",
-      "Python",
-      "PostgreSQL",
-      "AWS",
-    ],
-    whatItShows: "What it shows: 0-to-1 product building from workflow pain.",
-  },
-  {
-    title: "rubiMESSAGE",
-    description:
-      "An SMS workflow tool for public safety teams that helps non-emergency calltakers send citizens the correct online report link while clearing phone lines faster. I helped shape the workflow, build the frontend experience, connect backend APIs, and think through the product feedback loop.",
-    tags: [
-      "React",
-      "TypeScript",
-      "Rust APIs",
-      "Public Safety",
-      "Workflow Design",
-    ],
-    whatItShows: "What it shows: shipping in high-stakes operational contexts.",
-  },
-  {
-    title: "Photo Booth Package-Fit Tool",
-    description:
-      "A decision-support tool that helps event clients input event details and understand which package structure makes sense based on active booth hours, paused time, customization, and total cost. Built to reduce buyer uncertainty and make the sales process clearer.",
-    tags: ["Client Intake", "Commerce", "Workflow Design", "Small Business"],
-    whatItShows:
-      "What it shows: translating real buyer questions into clearer product decisions.",
-  },
-];
-
-export const EDUCATION_CONTENT = {
-  SCHOOL: "McMaster University",
-  DEGREE: "Bachelor of Science",
-  COURSES: [
-    "Data Structures and Algorithms",
-    "Databases",
-    "Software Development Practice",
-    "Design Sprint Methodologies",
-  ],
-} as const;
-
-export const CONTACT_CONTENT = {
-  TITLE: "Want to connect?",
-  BODY: "I’m interested in product, software, AI-assisted building, and tools that make real business workflows clearer.",
-  EMAIL: "hello@supriyathukral.com",
-  FOOTER_CREDIT: "Built by Supriya Thukral",
-} as const;

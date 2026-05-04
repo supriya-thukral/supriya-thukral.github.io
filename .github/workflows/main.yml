@@ -1,45 +1,28 @@
-name: Build and Deploy
+name: CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      # Step 1: Checkout the repository
-      - name: Checkout 🛎️
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      # Step 2: Set up Node.js with the correct version
-      - name: Install Node.js and npm
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: "yarn"
           cache-dependency-path: "yarn.lock"
 
-      # Step 3: Install dependencies using Yarn
-      - name: Install dependencies 🔧
-        run: yarn install
+      - name: Install
+        run: yarn install --frozen-lockfile
 
-      # Step 4: Build the project
-      - name: Build 🚀
+      - name: Lint
+        run: yarn lint
+
+      - name: Build
         run: yarn build
-
-      # GitHub Pages runs Jekyll by default and skips folders named `_next`,
-      # which breaks Next.js static assets (CSS/JS). Disable Jekyll.
-      - name: Ensure Jekyll is disabled for Pages
-        run: touch out/.nojekyll
-
-      # Step 5: Deploy to GitHub Pages
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: out
-          token: ${{ secrets.GITHUB_TOKEN }}
-          clean: true

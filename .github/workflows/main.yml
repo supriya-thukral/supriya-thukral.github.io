@@ -13,33 +13,25 @@ jobs:
     steps:
       # Step 1: Checkout the repository
       - name: Checkout 🛎️
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       # Step 2: Set up Node.js with the correct version
       - name: Install Node.js and npm
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: "18"
+          cache: "yarn"
+          cache-dependency-path: "yarn.lock"
 
-      # Step 3: Cache Yarn dependencies for faster builds
-      - name: Cache Yarn dependencies
-        uses: actions/cache@v2
-        with:
-          path: |
-            ~/.yarn/cache
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
-      # Step 4: Install dependencies using Yarn
+      # Step 3: Install dependencies using Yarn
       - name: Install dependencies 🔧
         run: yarn install
 
-      # Step 5: Build the project
+      # Step 4: Build the project
       - name: Build 🚀
         run: yarn build
 
-      # Step 6: Deploy to GitHub Pages
+      # Step 5: Deploy to GitHub Pages
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:

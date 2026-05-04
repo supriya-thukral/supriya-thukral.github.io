@@ -33,7 +33,7 @@ export default function Home() {
           <Card>
             <CardContent className="grid gap-6 p-5 pt-5 md:grid-cols-[minmax(0,1fr)_300px] md:items-center md:gap-7 md:p-6 lg:gap-8 lg:p-7">
               <div className="order-2 max-w-[680px] md:order-1">
-                <h1 className="mb-4 max-w-[17ch] text-[clamp(2.2rem,7.6vw,4.15rem)] font-[650] leading-[1.04] tracking-[-0.042em] text-(--color-text)">
+                <h1 className="mb-4 max-w-[17ch] text-[clamp(2.5rem,5vw,4.1rem)] font-[650] leading-[1.02] tracking-[-0.04em] text-(--color-text)">
                   {heroContent.title}
                 </h1>
                 <p className="prose-copy mb-6">{heroContent.subtitle}</p>
@@ -70,7 +70,7 @@ export default function Home() {
                           Builder Snapshot
                         </p>
                         <p className="text-sm text-(--color-text-muted)">
-                          Product-builder focus
+                          Workflow tools & operator insight
                         </p>
                       </div>
                     </div>
@@ -140,8 +140,15 @@ export default function Home() {
                 ].map((item) => (
                   <div
                     key={item.title}
-                    className="rounded-2xl border border-(--color-border) bg-white p-4"
+                    className="rounded-2xl border border-(--color-border) bg-(--color-bg-soft) p-4"
                   >
+                    <p className="mb-2 text-[0.72rem] font-bold uppercase tracking-[0.08em] text-(--color-accent)">
+                      {item.title === "Observe workflow pain"
+                        ? "01"
+                        : item.title === "Scope the first useful version"
+                          ? "02"
+                          : "03"}
+                    </p>
                     <p className="mb-1 text-sm font-semibold text-(--color-text)">{item.title}</p>
                     <p className="text-sm text-(--color-text-secondary)">{item.description}</p>
                   </div>
@@ -196,9 +203,15 @@ export default function Home() {
                       <li key={bullet}>{bullet}</li>
                     ))}
                   </ul>
+                  {"currentFocus" in item && item.currentFocus ? (
+                    <p className="text-sm leading-6 text-(--color-text-secondary)">
+                      <span className="font-semibold text-(--color-text)">Current focus:</span>{" "}
+                      {item.currentFocus}
+                    </p>
+                  ) : null}
                   <div className="rounded-xl border border-(--color-border) bg-(--color-bg-soft) px-3.5 py-3 text-[0.92rem] text-(--color-text)">
-                    <span className="font-semibold">What this shows:</span>{" "}
-                    <span className="text-(--color-text-secondary)">{item.whatThisShows}</span>
+                    <span className="font-semibold">Product lens:</span>{" "}
+                    <span className="text-(--color-text-secondary)">{item.productLens}</span>
                   </div>
                   {"tags" in item && item.tags ? (
                     <div className="flex flex-wrap gap-2">
@@ -223,7 +236,7 @@ export default function Home() {
           <h2 className="mb-5 text-[clamp(2rem,3vw,3.2rem)] leading-none">
             Selected Projects
           </h2>
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-5 md:grid-cols-2">
             {projects.map((project) => (
               <Card key={project.title} className="h-full">
                 <CardHeader className="pb-3">
@@ -244,8 +257,26 @@ export default function Home() {
                     <span className="font-semibold text-(--color-text)">Built:</span>{" "}
                     {project.built}
                   </p>
+                  <p className="text-sm leading-6 text-(--color-text-secondary)">
+                    <span className="font-semibold text-(--color-text)">
+                      Decision/tradeoff:
+                    </span>{" "}
+                    {project.decisionTradeoff}
+                  </p>
+                  {"constraint" in project && project.constraint ? (
+                    <p className="text-sm leading-6 text-(--color-text-secondary)">
+                      <span className="font-semibold text-(--color-text)">Constraint:</span>{" "}
+                      {project.constraint}
+                    </p>
+                  ) : null}
+                  {"whatThisShows" in project && project.whatThisShows ? (
+                    <p className="text-sm leading-6 text-(--color-text-secondary)">
+                      <span className="font-semibold text-(--color-text)">What this shows:</span>{" "}
+                      {project.whatThisShows}
+                    </p>
+                  ) : null}
                   <div className="flex flex-wrap gap-2">
-                    {project.tags.slice(0, 3).map((tag) => (
+                    {project.tags.map((tag) => (
                       <Badge key={tag}>{tag}</Badge>
                     ))}
                   </div>
@@ -287,7 +318,6 @@ export default function Home() {
               </p>
               <div className="flex flex-wrap gap-2">
                 {[
-                  "Data Structures and Algorithms",
                   "Databases",
                   "Software Development Practice",
                   "Design Sprint Methodologies",

@@ -39,8 +39,9 @@ export const experienceItems = [
       "Used Cursor and AI-assisted workflows to prototype faster while keeping product judgment, constraints, and tradeoffs human-led.",
     ],
     tags: ["Product thinking", "Workflow design", "AWS", "AI-assisted building"],
-    whatThisShows: "Product judgment, MVP scoping, and full-stack execution.",
-    featured: true,
+    productLens:
+      "Turning firsthand service-business pain into a focused MVP, while choosing what to build now versus later.",
+    currentFocus: "Client intake, project communication, and file delivery workflows.",
   },
   {
     label: "Shipped Workflow Tool",
@@ -54,10 +55,11 @@ export const experienceItems = [
       "Redesigned search and filtering workflows with Google-style search, view toggles, and contextual drawers.",
       "Improved mapping and address workflows with multi-address support, dynamic pin loading, and Google Maps autocomplete.",
       "Reduced app load time from 120 seconds to under 5 seconds through background loading, asset optimization, and endpoint improvements.",
+      "Represented Rubicon at IACP, demoing public safety tools and hearing firsthand how agencies think about reporting, workflows, and operational friction.",
     ],
     tags: ["Workflow design", "React", "TypeScript", "Public safety"],
-    whatThisShows: "Workflow design in high-pressure operational environments.",
-    featured: true,
+    productLens:
+      "Designed for a live-call environment where speed, clarity, and low cognitive load mattered.",
   },
   {
     label: "Small Business Operations",
@@ -72,7 +74,8 @@ export const experienceItems = [
       "Translated firsthand business operations into Parva product decisions around client management, project workflows, communication history, and file delivery.",
     ],
     tags: ["Small business", "Customer empathy", "Workflow design"],
-    whatThisShows: "Merchant empathy and operator insight from real operations.",
+    productLens:
+      "Learned that buyer friction often comes from uncertainty, not just price.",
   },
   {
     label: "Internal Platform Tools",
@@ -85,20 +88,23 @@ export const experienceItems = [
       "Reduced dashboard creation time from 6 months to 2 months by building standardized templates and self-service configuration tooling.",
       "Collaborated with engineers, customer-facing teams, and product stakeholders during sprint planning, code reviews, and architecture discussions.",
     ],
-    whatThisShows: "Platform thinking and operational leverage for teams.",
+    tags: ["Platform tools", "Internal enablement", "Django", "PostgreSQL"],
+    productLens:
+      "Built internal tools that reduced dependency on engineering and helped teams move faster.",
   },
   {
-    label: "Team Operations",
+    label: "Earlier Leadership",
     title: "Director of Sponsorship, DeltaHacks",
     subtitle: "McMaster annual hackathon",
     description:
-      "Led sponsorship strategy for McMaster’s annual hackathon, securing over $20,000 in sponsorships and coordinating partnerships with tech companies during a fully remote event.",
+      "Led sponsorship operations for McMaster’s annual hackathon during a fully remote event.",
     bullets: [
-      "Developed sponsorship outreach and partner communication workflows.",
-      "Coordinated sponsor relationships while leading a distributed student team.",
-      "Built process assets that made sponsorship execution clearer and repeatable.",
+      "Secured $20,000+ in sponsorships.",
+      "Built repeatable outreach and partner communication workflows.",
+      "Led a distributed student team.",
     ],
-    whatThisShows: "Cross-functional planning and structured execution under constraints.",
+    tags: ["Operations", "Partnerships", "Leadership"],
+    productLens: "Built repeatable systems under constraints with limited resources.",
   },
 ] as const;
 
@@ -107,10 +113,12 @@ export const projects = [
     label: "Product in progress",
     title: "Parva",
     problem:
-      "Creative businesses manage client details, messages, files, and follow-ups across too many places.",
+      "Creative service businesses often manage client details, messages, files, and follow-ups across too many places.",
     built:
-      "Pre-launch CRM workflows for intake, projects, communication, and file delivery.",
-    tags: ["Next.js", "React", "Node.js", "Python", "PostgreSQL"],
+      "Pre-launch CRM workflows for client intake, projects, communication, and file delivery.",
+    decisionTradeoff:
+      "Focused the MVP on the core client/project workflow before adding broader CRM complexity.",
+    tags: ["Product thinking", "Client intake", "Workflow design", "Full-stack"],
   },
   {
     label: "Shipped workflow tool",
@@ -118,17 +126,36 @@ export const projects = [
     problem:
       "Non-emergency calltakers needed to clear phone lines while routing citizens to the correct report.",
     built:
-      "SMS workflow for sending the right report link during a live call.",
-    tags: ["React", "TypeScript", "Rust APIs", "Workflow Design"],
+      "SMS workflow for sending the right online report link during a live call.",
+    constraint:
+      "The workflow had to be fast enough for a calltaker to use while still on the phone, and clear enough for a citizen to act on without extra explanation.",
+    decisionTradeoff:
+      "Kept the workflow fast and simple so it could work in a high-volume calltaker environment.",
+    tags: ["Workflow design", "Public safety", "React", "TypeScript"],
   },
   {
     label: "Commerce friction",
     title: "Photo Booth Package-Fit Tool",
     problem:
-      "Event clients were unsure which package, active hours, and paused time they needed.",
+      "Event clients were unsure which package, active hours, paused time, and customization options they needed.",
     built:
       "Decision-support tool that helps clients understand package fit and estimated cost.",
-    tags: ["Client Intake", "Commerce", "Workflow Design", "Small Business"],
+    decisionTradeoff:
+      "Made package logic more transparent without overwhelming clients with every operational detail.",
+    tags: ["Commerce", "Customer empathy", "Small business", "Client intake"],
+  },
+  {
+    label: "AI-assisted workflow",
+    title: "Automated PDF Processing",
+    problem:
+      "Crime analysts received PDFs from other agencies and had to manually extract, summarize, organize, and circulate information.",
+    built:
+      "An end-to-end PDF upload workflow that extracted text and images, generated structured descriptions and tags, and surfaced results for analyst review and editing.",
+    decisionTradeoff:
+      "Kept humans in the loop so analysts could verify and refine generated outputs instead of blindly trusting automation.",
+    whatThisShows:
+      "AI-assisted workflow design, operational efficiency, and judgment around human review.",
+    tags: ["AI-assisted workflow", "Human-in-the-loop", "Operational tools", "Public safety"],
   },
 ] as const;
 
@@ -141,28 +168,15 @@ export const skillGroups = [
       "Workflow design",
       "Problem discovery",
       "Prototyping",
-      "Technical tradeoffs",
       "Customer empathy",
     ],
   },
   {
-    title: "Frontend Execution",
-    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "ShadCN"],
-  },
-  {
-    title: "Backend & Data",
-    skills: ["Node.js", "Python", "Django", "SQL", "PostgreSQL", "Rust"],
+    title: "Technical Execution",
+    skills: ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL", "API design"],
   },
   {
     title: "AI / Tools",
-    skills: [
-      "AI-assisted prototyping",
-      "Cursor",
-      "AWS",
-      "Git",
-      "GitHub Actions",
-      "Jest",
-      "OpenAPI",
-    ],
+    skills: ["Cursor", "AI-assisted prototyping", "AWS", "GitHub Actions", "OpenAPI"],
   },
 ] as const;

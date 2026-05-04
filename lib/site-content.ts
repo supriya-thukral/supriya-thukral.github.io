@@ -7,6 +7,11 @@ export const navItems = [
   { id: "contact", label: "Contact" },
 ] as const;
 
+/** Burlington Photo Booth — public site and social */
+export const BURLINGTON_PHOTO_BOOTH_URL = "https://burlingtonphotobooth.com/" as const;
+export const BURLINGTON_PHOTO_BOOTH_INSTAGRAM_URL =
+  "https://www.instagram.com/burlingtonphotobooth/" as const;
+
 export const heroContent = {
   title: "Product-minded software developer building tools for real workflows.",
   subtitle:
@@ -76,6 +81,10 @@ export const experienceItems = [
     tags: ["Small business", "Customer empathy", "Workflow design"],
     productLens:
       "Learned that buyer friction often comes from uncertainty, not just price.",
+    relatedLinks: [
+      { label: "Website", href: BURLINGTON_PHOTO_BOOTH_URL },
+      { label: "Instagram", href: BURLINGTON_PHOTO_BOOTH_INSTAGRAM_URL },
+    ],
   },
   {
     label: "Internal Platform Tools",
@@ -145,6 +154,10 @@ export const projects = [
     decisionTradeoff:
       "Made package logic more transparent without overwhelming clients with every operational detail.",
     tags: ["Commerce", "Customer empathy", "Small business", "Client intake"],
+    relatedLinks: [
+      { label: "Live site", href: BURLINGTON_PHOTO_BOOTH_URL },
+      { label: "Instagram", href: BURLINGTON_PHOTO_BOOTH_INSTAGRAM_URL },
+    ],
   },
   {
     label: "AI-assisted workflow",

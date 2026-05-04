@@ -9,6 +9,8 @@ import {
 } from "@/components/ui/card";
 import {
   aboutParagraphs,
+  BURLINGTON_PHOTO_BOOTH_INSTAGRAM_URL,
+  BURLINGTON_PHOTO_BOOTH_URL,
   experienceItems,
   heroContent,
   navItems,
@@ -94,6 +96,26 @@ export default function Home() {
                         </p>
                         <p className="text-(--color-text-secondary)">
                           Client intake, packages, timelines, and gallery delivery
+                        </p>
+                        <p className="mt-2 flex flex-wrap gap-x-3 gap-y-1">
+                          <a
+                            href={BURLINGTON_PHOTO_BOOTH_URL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex min-h-11 items-center text-sm font-medium text-(--color-accent) underline underline-offset-2 hover:text-(--color-primary) focus-visible:rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-primary) focus-visible:ring-offset-2"
+                            title="Burlington Photo Booth website (opens in new tab)"
+                          >
+                            burlingtonphotobooth.com
+                          </a>
+                          <a
+                            href={BURLINGTON_PHOTO_BOOTH_INSTAGRAM_URL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex min-h-11 items-center text-sm font-medium text-(--color-accent) underline underline-offset-2 hover:text-(--color-primary) focus-visible:rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-primary) focus-visible:ring-offset-2"
+                            title="Burlington Photo Booth on Instagram (opens in new tab)"
+                          >
+                            Instagram
+                          </a>
                         </p>
                       </div>
                       <div>
@@ -196,6 +218,24 @@ export default function Home() {
                       <CardDescription className="mt-1 text-[0.9rem] font-medium text-(--color-text-muted)">
                         {item.subtitle}
                       </CardDescription>
+                      {"relatedLinks" in item &&
+                      item.relatedLinks &&
+                      item.relatedLinks.length > 0 ? (
+                        <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
+                          {item.relatedLinks.map((link) => (
+                            <a
+                              key={link.label}
+                              href={link.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex min-h-11 items-center text-sm font-medium text-(--color-accent) underline underline-offset-2 hover:text-(--color-primary) focus-visible:rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-primary) focus-visible:ring-offset-2"
+                              title={`${link.label} (opens in new tab)`}
+                            >
+                              {link.label}
+                            </a>
+                          ))}
+                        </div>
+                      ) : null}
                     </div>
                     {item.title in experienceLogoMap ? (
                       <div className="hidden shrink-0 overflow-hidden rounded-lg border border-(--color-border) bg-white p-1 sm:block">
@@ -296,6 +336,24 @@ export default function Home() {
                       <span className="font-semibold text-(--color-text)">What this shows:</span>{" "}
                       {project.whatThisShows}
                     </p>
+                  ) : null}
+                  {"relatedLinks" in project &&
+                  project.relatedLinks &&
+                  project.relatedLinks.length > 0 ? (
+                    <div className="flex flex-wrap gap-x-4 gap-y-1">
+                      {project.relatedLinks.map((link) => (
+                        <a
+                          key={link.label}
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex min-h-11 items-center text-sm font-medium text-(--color-accent) underline underline-offset-2 hover:text-(--color-primary) focus-visible:rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--color-primary) focus-visible:ring-offset-2"
+                          title={`${link.label} (opens in new tab)`}
+                        >
+                          {link.label}
+                        </a>
+                      ))}
+                    </div>
                   ) : null}
                   <div className="mt-auto flex flex-wrap gap-2 pt-1">
                     {project.tags.map((tag) => (

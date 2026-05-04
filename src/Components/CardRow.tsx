@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import { Card, CardContent, CardMedia, Typography, Box } from "@mui/material";
-import { ImageProps } from "./Page";
+import { ImageProps } from "../types/ui";
 
 interface CardProps {
   title?: string;
@@ -25,6 +25,7 @@ const CardComponent: React.FC<CardProps> = ({
   imageLocation = "left",
 }) => {
   const hasImage = !!image;
+  const imageClassName = image?.className ?? "";
 
   return (
     <Card
@@ -35,9 +36,12 @@ const CardComponent: React.FC<CardProps> = ({
           xs: "column",
           sm: imageLocation === "right" ? "row-reverse" : "row",
         },
-        boxShadow: "none",
-        borderRadius: 0,
+        borderRadius: "20px",
+        border: "1px solid",
+        borderColor: "divider",
         mb: 4,
+        backgroundColor: "background.paper",
+        boxShadow: "0 8px 24px rgba(0, 0, 0, 0.04)",
       }}
     >
       {hasImage && (
@@ -55,20 +59,16 @@ const CardComponent: React.FC<CardProps> = ({
             component="img"
             image={image.src}
             alt={image.alt}
-            className={className}
+            className={imageClassName}
             sx={{
               width: "100%",
               height: "auto",
               objectFit: "cover",
               objectPosition: "center",
-              transition: "transform 0.3s ease, box-shadow 0.3s ease",
-              boxShadow: className === "round-image" ? 0 : 3,
-              borderRadius: className === "round-image" ? "50%" : 0,
-              aspectRatio: className === "round-image" ? "1 / 1" : undefined,
-              "&:hover": {
-                transform: "scale(1.05)",
-                boxShadow: className === "round-image" ? 0 : 6,
-              },
+              borderRadius: imageClassName === "round-image" ? "50%" : "14px",
+              aspectRatio: imageClassName === "round-image" ? "1 / 1" : undefined,
+              border: "1px solid",
+              borderColor: "divider",
             }}
           />
         </Box>
@@ -78,7 +78,7 @@ const CardComponent: React.FC<CardProps> = ({
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          padding: "1%",
+          padding: { xs: "20px", sm: "24px" },
           width: { xs: "100%", sm: "70%" },
         }}
       >

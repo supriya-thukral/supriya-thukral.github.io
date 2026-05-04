@@ -1,13 +1,33 @@
 import React from "react";
 import PageWithChildren from "../Components/PageWithChildren";
-import ContactForm from "../Components/ContactForm";
-import { Typography } from "@mui/material";
+import { Typography, Box, Link } from "@mui/material";
+import { CONTACT_CONTENT } from "../constants";
 
 const ContactPage: React.FC = () => {
   return (
     <PageWithChildren id="contact" className="contact">
-      <Typography variant="h2">Connect with Me</Typography>
-      <ContactForm />
+      <Box
+        sx={{
+          maxWidth: "720px",
+          p: { xs: 2, sm: 3 },
+          border: "1px solid",
+          borderColor: "divider",
+          borderRadius: 2,
+        }}
+      >
+        <Typography variant="h1" gutterBottom>
+          {CONTACT_CONTENT.TITLE}
+        </Typography>
+        <Typography variant="body1" paragraph>
+          {CONTACT_CONTENT.BODY}
+        </Typography>
+        <Typography variant="body1">
+          Email:{" "}
+          <Link href={`mailto:${CONTACT_CONTENT.EMAIL}`} underline="hover">
+            {CONTACT_CONTENT.EMAIL}
+          </Link>
+        </Typography>
+      </Box>
     </PageWithChildren>
   );
 };

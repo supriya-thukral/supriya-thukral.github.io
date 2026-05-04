@@ -18,9 +18,12 @@ const BackToTopButton: React.FC = () => {
   };
 
   const scrollToTop = () => {
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: prefersReducedMotion ? "auto" : "smooth",
     });
   };
 
@@ -43,6 +46,7 @@ const BackToTopButton: React.FC = () => {
     <button
       className="back-to-top-button"
       onClick={scrollToTop}
+      aria-label="Back to top"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       style={{
@@ -50,14 +54,17 @@ const BackToTopButton: React.FC = () => {
         position: "fixed",
         bottom: "30px",
         right: "30px",
-        background: "transparent",
-        border: "none",
+        background: "#FFFFFF",
+        border: "1px solid #D6D3CE",
+        borderRadius: "999px",
         cursor: "pointer",
-        fontSize: "48px",
-        color: hover ? "#555" : "#333",
-        zIndex: 9999,
+        fontSize: "28px",
+        color: hover ? "#163C35" : "#1F4F46",
+        zIndex: 1000,
         transition: "opacity 0.3s",
         opacity: showButton || prevScrollY.current > 100 ? 1 : 0,
+        width: "48px",
+        height: "48px",
       }}
     >
       <FontAwesomeIcon icon={faAngleUp} className="outline-caret-icon" />

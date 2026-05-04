@@ -13,10 +13,10 @@ const PageWithChildren: React.FC<PageWithChildrenProps> = ({
   id,
 }) => {
   return (
-    <div className={"page " + className} id={id}>
+    <section className={"page " + className} id={id} aria-label={id}>
       <div className="anchor-offset" />
       {children}
-    </div>
+    </section>
   );
 };
 

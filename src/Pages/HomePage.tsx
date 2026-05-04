@@ -1,89 +1,59 @@
 import React from "react";
-import { Typography, Box } from "@mui/material";
+import { Typography, Box, Button, Chip, Stack } from "@mui/material";
 import PageWithChildren from "../Components/PageWithChildren";
 import CardComponent from "../Components/CardRow";
 import headshot from "../Assets/Images/SupriyaThukral.jpg";
-import { ImageProps } from "../Components/Page";
+import { ImageProps } from "../types/ui";
 import useWindowSize from "../helpers";
-import { useMemo } from "react";
-
-const calculateRoundedExperience = () => {
-  const startDate = new Date(2022, 4);
-  const currentDate = new Date();
-  const years = currentDate.getFullYear() - startDate.getFullYear();
-  const months = currentDate.getMonth() - startDate.getMonth();
-
-  const totalYears = years + months / 12;
-  return Math.ceil(totalYears);
-};
+import { ABOUT_CONTENT, HERO_CONTENT } from "../constants";
 
 const HomePage: React.FC = () => {
   const headshotProps: ImageProps = {
     src: headshot,
-    alt: "Headshot",
+    alt: "Portrait of Supriya Thukral",
     className: "round-image",
   };
   const windowSize = useWindowSize() || { width: 0, height: 0 };
-  const experience = useMemo(
-    () => `about ${calculateRoundedExperience()} years`,
-    [],
-  );
 
   return (
     <PageWithChildren id="home">
       <CardComponent
-        title="Hello World"
         image={headshotProps}
         imageLocation={windowSize.width <= 768 ? "left" : "right"}
       >
-        <Box sx={{ mt: 2 }}>
-          <Typography variant="body1" paragraph>
-            I'm Supriya, a <strong>full-stack software developer</strong> with{" "}
-            {experience} of experience and a
-            <strong>
-              {" "}
-              proven track record of delivering impactful solutions
-            </strong>
-            . My expertise spans both{" "}
-            <strong>front-end and back-end technologies</strong>, with a focus
-            on optimizing user experience and efficiency.
+        <Box sx={{ mt: 1 }}>
+          <Typography variant="h1" sx={{ mb: 2, maxWidth: "20ch" }}>
+            {HERO_CONTENT.TITLE}
           </Typography>
+          <Typography variant="body1" paragraph sx={{ maxWidth: "680px" }}>
+            {HERO_CONTENT.SUBTITLE}
+          </Typography>
+          <Stack direction="row" spacing={1} useFlexGap flexWrap="wrap" sx={{ mb: 3 }}>
+            {HERO_CONTENT.CALLOUTS.map((callout) => (
+              <Chip key={callout} label={callout} />
+            ))}
+          </Stack>
+          <Stack direction="row" spacing={2} useFlexGap flexWrap="wrap">
+            <Button variant="contained" href="#experience">
+              {HERO_CONTENT.PRIMARY_CTA}
+            </Button>
+            <Button variant="outlined" href="#contact">
+              {HERO_CONTENT.SECONDARY_CTA}
+            </Button>
+          </Stack>
+        </Box>
+      </CardComponent>
 
-          <Typography variant="body1" paragraph>
-            My core technical strengths include <strong>React</strong> and
-            libraries like <strong>Redux</strong> and <strong>Recharts</strong>,
-            with <strong>TypeScript</strong> for robust front-end development. I
-            also bring strong{" "}
-            <strong>back-end skills in Python, Django, SQL, and Rust</strong>,
-            ensuring seamless integration and data management across projects.
+      <CardComponent>
+        <Box sx={{ mt: 1 }}>
+          <Typography variant="h2" gutterBottom>
+            {ABOUT_CONTENT.TITLE}
           </Typography>
-
-          <Typography variant="body1" paragraph>
-            I emphasize <strong>clean, maintainable code</strong> and adhere to
-            best practices in code quality, leveraging tools like{" "}
-            <strong>Jest, Vitest, ESLint, and Docker</strong>. My experience
-            also includes setting up robust CI/CD pipelines and implementing
-            scalable solutions that enhance both performance and user
-            engagement.
-          </Typography>
-
-          <Typography variant="body1" paragraph>
-            Beyond technical work, I bring valuable{" "}
-            <strong>leadership skills</strong> to the table. As the Director of
-            Sponsorship at{" "}
-            <strong>
-              <a
-                href="https://deltahacks.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                DeltaHacks
-              </a>
-            </strong>
-            , McMaster University's largest annual hackathon, I led a team of
-            15, securing over $20,000 in sponsorships and managing high-stakes
-            partnerships.
-          </Typography>
+          {ABOUT_CONTENT.PARAGRAPHS.map((paragraph) => (
+            <Typography key={paragraph} variant="body1" paragraph sx={{ maxWidth: "680px" }}>
+              {paragraph}
+            </Typography>
+          ))}
         </Box>
       </CardComponent>
     </PageWithChildren>

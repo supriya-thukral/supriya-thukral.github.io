@@ -4,6 +4,7 @@ import ExperiencePage from "./ExperiencePage";
 import HomePage from "./HomePage";
 import ProjectsPage from "./ProjectsPage";
 import SkillsPage from "./SkillsPage";
+import { NAV_ITEMS } from "../constants";
 
 export const pagesContent: {
   [key: string]: {
@@ -13,32 +14,32 @@ export const pagesContent: {
   };
 } = {
   home: {
-    title: "Home",
+    title: NAV_ITEMS.HOME,
     href: "home",
     component: HomePage,
   },
   experience: {
-    title: "Experience",
+    title: NAV_ITEMS.EXPERIENCE,
     href: "experience",
     component: ExperiencePage,
   },
-  skills: {
-    title: "Skills",
-    href: "skills",
-    component: SkillsPage,
-  },
   projects: {
-    title: "Projects",
+    title: NAV_ITEMS.PROJECTS,
     href: "projects",
     component: ProjectsPage,
   },
+  skills: {
+    title: NAV_ITEMS.SKILLS,
+    href: "skills",
+    component: SkillsPage,
+  },
   education: {
-    title: "Education",
+    title: NAV_ITEMS.EDUCATION,
     href: "education",
     component: EducationPage,
   },
   contact: {
-    title: "Contact",
+    title: NAV_ITEMS.CONTACT,
     href: "contact",
     component: ContactPage,
   },

@@ -10,9 +10,7 @@ function App() {
     <div className="App">
       <Router>
         {windowSize.width <= 768 ? <MobileNavigation /> : <TopNav />}
-        <div className="site-content">
-          <SiteContent />
-        </div>
+        <SiteContent />
       </Router>
     </div>
   );

@@ -1,12 +1,4 @@
-// @import "~normalize.css/normalize.css";
-
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 // Import all partials
 @import "_topNav";
@@ -16,89 +8,61 @@
 @import "_Card";
 @import "_Page";
 
-// Colours
-$primaryColor: #4a90e2; // Blue
-$secondaryColor: #009688; // Teal
-$neutralColor: #808080; // Medium Gray
-$customColor: #ff85d6a1; // Pink
+$page-background: #f8f7f4;
+$surface-background: #ffffff;
+$text-primary: #171717;
+$text-secondary: #525252;
+$muted-text: #737373;
+$border-color: #e8e5df;
+$accent: #1f4f46;
+$accent-dark: #163c35;
+$chip-bg: #f2f1ed;
 
-h3 {
-  font-style: italic;
-  margin-bottom: 10px;
-  font-size: 1em;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-h3,
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: $text-primary;
+  background: $page-background;
+  margin: 0;
 }
 
-h1,
-h2 {
-  font-family: "Lato", sans-serif;
+a {
+  color: $accent;
 }
 
-h4 {
-  font-family: "Open Sans", sans-serif;
-  margin-bottom: 5px;
-  font-size: 1em;
+a:hover {
+  color: $accent-dark;
 }
 
-// Footer styles
-.footer-container {
-  background-color: #f5f5f5;
-  padding: 20px;
-  @media (max-width: 768px) {
-    display: none;
-  }
+p {
+  color: #2f2f2f;
 }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  max-width: 960px;
-  margin: 0 auto;
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid $accent;
+  outline-offset: 2px;
+  border-radius: 8px;
 }
 
-.left-content {
-  h3 {
-    margin-bottom: 5px;
-    color: #333;
-    font-size: 1.2rem;
-  }
-
-  p {
-    color: #666;
-    font-size: 1rem;
-  }
-}
-
-.right-content {
-  p {
-    color: #333;
-    font-size: 1rem;
-
-    /* Heart icon styles */
-    ::after {
-      content: "❤️";
-      margin-left: 5px;
-    }
-  }
-}
-
-// Back to top button styles
 .back-to-top-button {
-  border: none;
-  background-color: transparent;
-  font-size: 24px;
-  color: #999;
-  cursor: pointer;
-  transition: color 0.2s ease-in-out;
-  outline: none;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-.back-to-top-button:hover {
-  color: #333;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

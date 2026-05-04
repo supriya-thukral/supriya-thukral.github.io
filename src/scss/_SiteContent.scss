@@ -1,14 +1,16 @@
 .site-content {
-  padding: 0 10%;
-  padding-top: 40px;
+  padding: 0 28px;
+  padding-top: 68px;
+  max-width: 1120px;
+  margin: 0 auto;
   .anchor-offset {
     display: block;
-    height: 80px;
-    margin-top: -70px;
+    height: 96px;
+    margin-top: -84px;
     visibility: hidden;
   }
   @media (max-width: 768px) {
-    padding: 0 2%; // reduced horizontal padding
-    padding-top: 40px; // reduced top padding
+    padding: 0 16px;
+    padding-top: 56px;
   }
 }

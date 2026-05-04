@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import logo from "../Assets/Images/Logo.png";
 import { pagesContent } from "../Pages/PagesContent";
+import { NAV_SECTION_IDS } from "../constants";
 
-const sections = Object.keys(pagesContent).map((key) => {
+const sections = NAV_SECTION_IDS.map((key) => {
   return {
     id: key,
     text: pagesContent[key].title,
@@ -47,7 +47,9 @@ const TopNav: React.FC = () => {
 
   return (
     <nav className="top-nav-container">
-      <img src={logo} alt="Logo" className="logo" />
+      <a href="#home" className="site-brand">
+        Supriya Thukral
+      </a>
       {sections.map((section) => (
         <div className="top-nav-item" key={section.id}>
           <a

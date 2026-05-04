@@ -30,6 +30,12 @@ export function SiteHeader({ navItems }: SiteHeaderProps) {
     const getActiveIdFromScroll = () => {
       if (!sections.length) return sectionIds[0] ?? "home";
 
+      // At top of page (including #home with no hash), keep Home active — avoids
+      // snapping to Contact on short pages where the viewport already shows the bottom.
+      if (window.scrollY < 12) {
+        return "home";
+      }
+
       const scrollPosition = window.scrollY + topOffset;
       let currentId = sections[0].id;
 
@@ -41,7 +47,9 @@ export function SiteHeader({ navItems }: SiteHeaderProps) {
 
       const pageBottom = window.scrollY + window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
-      if (pageBottom >= documentHeight - 2) {
+      const contentTallerThanViewport = documentHeight > window.innerHeight + 48;
+      const nearBottom = pageBottom >= documentHeight - 24;
+      if (contentTallerThanViewport && nearBottom && window.scrollY > 80) {
         return sections[sections.length - 1].id;
       }
 
@@ -131,7 +139,7 @@ export function SiteHeader({ navItems }: SiteHeaderProps) {
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className={`rounded-full px-4 py-2 text-[0.95rem] font-medium no-underline transition-colors hover:no-underline ${
+                className={`inline-flex min-h-11 items-center rounded-full px-4 py-2 text-[0.95rem] font-medium no-underline transition-colors hover:no-underline ${
                   isActive
                     ? "bg-(--color-primary) text-white"
                     : "text-(--color-text-secondary) hover:bg-(--color-bg-soft) hover:text-(--color-primary)"

@@ -10,7 +10,7 @@ export const navItems = [
 export const heroContent = {
   title: "Product-minded software developer building tools for real workflows.",
   subtitle:
-    "I’m Supriya, a full-stack software developer and small business owner. I build workflow tools across SaaS, public safety, and creative business operations, with a focus on turning messy, real-world processes into clear product experiences.",
+    "I’m Supriya, a full-stack software developer and small business owner building workflow tools across SaaS, public safety, and creative business operations. I focus on turning messy, real-world processes into clear product experiences.",
   chips: [
     "0-to-1 product builder",
     "Small business operator",
@@ -31,7 +31,7 @@ export const experienceItems = [
     subtitle:
       "Pre-launch CRM for creative service businesses | March 2025 – Present",
     description:
-      "Building a pre-launch CRM for creative service businesses to centralize client communication, project tracking, and file delivery. I own product direction, MVP scoping, architecture, and implementation.",
+      "Building a pre-launch CRM for creative service businesses to centralize client communication, project tracking, and file delivery. Owning product direction, MVP scoping, architecture, and implementation.",
     bullets: [
       "Identified recurring workflow gaps in creative service businesses, including scattered client communication, project details, files, and follow-ups.",
       "Defined core product workflows for contacts, projects, client intake, threaded messaging, and asset delivery.",
@@ -55,7 +55,7 @@ export const experienceItems = [
       "Redesigned search and filtering workflows with Google-style search, view toggles, and contextual drawers.",
       "Improved mapping and address workflows with multi-address support, dynamic pin loading, and Google Maps autocomplete.",
       "Reduced app load time from 120 seconds to under 5 seconds through background loading, asset optimization, and endpoint improvements.",
-      "Represented Rubicon at IACP, demoing public safety tools and hearing firsthand how agencies think about reporting, workflows, and operational friction.",
+      "Represented Rubicon at IACP, demoing public safety tools and hearing firsthand how agencies evaluate reporting workflows and operational friction.",
     ],
     tags: ["Workflow design", "React", "TypeScript", "Public safety"],
     productLens:
@@ -105,6 +105,8 @@ export const experienceItems = [
     ],
     tags: ["Operations", "Partnerships", "Leadership"],
     productLens: "Built repeatable systems under constraints with limited resources.",
+    /** Visually lighter card at end of Experience */
+    isCompact: true,
   },
 ] as const;
 
@@ -154,7 +156,7 @@ export const projects = [
     decisionTradeoff:
       "Kept humans in the loop so analysts could verify and refine generated outputs instead of blindly trusting automation.",
     whatThisShows:
-      "AI-assisted workflow design, operational efficiency, and judgment around human review.",
+      "AI-assisted workflow design, operational efficiency, and judgment around human-in-the-loop review.",
     tags: ["AI-assisted workflow", "Human-in-the-loop", "Operational tools", "Public safety"],
   },
 ] as const;

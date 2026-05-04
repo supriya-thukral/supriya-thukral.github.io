@@ -165,16 +165,32 @@ export default function Home() {
             {experienceItems.map((item) => (
               <Card
                 key={item.title}
-                className="bg-(--color-surface)"
+                className={
+                  "isCompact" in item && item.isCompact
+                    ? "bg-(--color-surface) shadow-none"
+                    : "bg-(--color-surface)"
+                }
               >
-                <CardHeader className="pb-2 px-5 pt-5 sm:px-8 sm:pt-8">
+                <CardHeader
+                  className={
+                    "isCompact" in item && item.isCompact
+                      ? "pb-2 px-4 pt-4 sm:px-6 sm:pt-6"
+                      : "pb-2 px-5 pt-5 sm:px-8 sm:pt-8"
+                  }
+                >
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <p className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-(--color-border) bg-white px-2.5 py-1 text-[0.72rem] font-bold uppercase tracking-[0.08em] text-(--color-accent)">
                         <span className="h-1.5 w-1.5 rounded-full bg-(--color-highlight)" />
                         {item.label}
                       </p>
-                      <CardTitle className="text-[1.26rem] font-bold text-(--color-text) sm:text-[1.38rem]">
+                      <CardTitle
+                        className={
+                          "isCompact" in item && item.isCompact
+                            ? "text-[1.05rem] font-semibold text-(--color-text) sm:text-[1.12rem]"
+                            : "text-[1.26rem] font-bold text-(--color-text) sm:text-[1.38rem]"
+                        }
+                      >
                         {item.title}
                       </CardTitle>
                       <CardDescription className="mt-1 text-[0.9rem] font-medium text-(--color-text-muted)">
@@ -194,7 +210,13 @@ export default function Home() {
                     ) : null}
                   </div>
                 </CardHeader>
-                <CardContent className="space-y-4 px-5 pb-5 pt-0 sm:px-8 sm:pb-8">
+                <CardContent
+                  className={
+                    "isCompact" in item && item.isCompact
+                      ? "space-y-3 px-4 pb-4 pt-0 sm:px-6 sm:pb-6"
+                      : "space-y-4 px-5 pb-5 pt-0 sm:px-8 sm:pb-8"
+                  }
+                >
                   <p className="max-w-[760px] text-[1rem] leading-[1.6] text-(--color-text-secondary)">
                     {item.description}
                   </p>
@@ -236,9 +258,9 @@ export default function Home() {
           <h2 className="mb-5 text-[clamp(2rem,3vw,3.2rem)] leading-none">
             Selected Projects
           </h2>
-          <div className="grid gap-5 md:grid-cols-2">
+          <div className="grid auto-rows-fr gap-5 md:grid-cols-2">
             {projects.map((project) => (
-              <Card key={project.title} className="h-full">
+              <Card key={project.title} className="flex h-full flex-col">
                 <CardHeader className="pb-3">
                   <p className="mb-1 inline-flex items-center gap-1.5 text-[0.77rem] font-semibold uppercase tracking-[0.08em] text-(--color-accent)">
                     <span className="h-1.5 w-1.5 rounded-full bg-(--color-highlight)" />
@@ -246,7 +268,7 @@ export default function Home() {
                   </p>
                   <CardTitle>{project.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="flex h-full flex-col gap-4">
+                <CardContent className="flex flex-1 flex-col gap-4">
                   <p className="text-sm leading-6 text-(--color-text-secondary)">
                     <span className="font-semibold text-(--color-text)">
                       Product problem:
@@ -275,7 +297,7 @@ export default function Home() {
                       {project.whatThisShows}
                     </p>
                   ) : null}
-                  <div className="flex flex-wrap gap-2">
+                  <div className="mt-auto flex flex-wrap gap-2 pt-1">
                     {project.tags.map((tag) => (
                       <Badge key={tag}>{tag}</Badge>
                     ))}

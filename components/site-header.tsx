@@ -1,18 +1,27 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Github, Linkedin, Menu, X } from "lucide-react";
 
 type NavItem = {
   id: string;
   label: string;
 };
 
+type SocialLinkId = "linkedin" | "github";
+
+type SocialLink = {
+  id: SocialLinkId;
+  label: string;
+  href: string;
+};
+
 interface SiteHeaderProps {
   navItems: readonly NavItem[];
+  socialLinks?: readonly SocialLink[];
 }
 
-export function SiteHeader({ navItems }: SiteHeaderProps) {
+export function SiteHeader({ navItems, socialLinks = [] }: SiteHeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeId, setActiveId] = useState("home");
 
@@ -150,6 +159,27 @@ export function SiteHeader({ navItems }: SiteHeaderProps) {
             );
           })}
         </div>
+
+        {socialLinks.length > 0 ? (
+          <div className="hidden items-center gap-1 md:flex">
+            {socialLinks.map((link) => {
+              const Icon = link.id === "linkedin" ? Linkedin : Github;
+              return (
+                <a
+                  key={link.id}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-(--color-border) text-(--color-text) transition-colors hover:bg-(--color-bg-soft) hover:text-(--color-primary)"
+                  aria-label={`${link.label} (opens in new tab)`}
+                  title={`${link.label} (opens in new tab)`}
+                >
+                  <Icon size={18} />
+                </a>
+              );
+            })}
+          </div>
+        ) : null}
       </nav>
 
       {isOpen && (
@@ -174,6 +204,29 @@ export function SiteHeader({ navItems }: SiteHeaderProps) {
               </a>
             );
           })}
+
+          {socialLinks.length > 0 ? (
+            <div className="mt-3 flex flex-wrap gap-2 border-t border-(--color-border) pt-3">
+              {socialLinks.map((link) => {
+                const Icon = link.id === "linkedin" ? Linkedin : Github;
+                return (
+                  <a
+                    key={link.id}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-(--color-border) px-3 text-sm font-medium text-(--color-text) no-underline transition-colors hover:bg-(--color-bg-soft) hover:text-(--color-primary) hover:no-underline"
+                    onClick={() => setIsOpen(false)}
+                    aria-label={`${link.label} (opens in new tab)`}
+                    title={`${link.label} (opens in new tab)`}
+                  >
+                    <Icon size={18} />
+                    {link.label}
+                  </a>
+                );
+              })}
+            </div>
+          ) : null}
         </div>
       )}
     </header>

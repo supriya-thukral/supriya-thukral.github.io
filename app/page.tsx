@@ -15,6 +15,7 @@ import {
   heroContent,
   navItems,
   projects,
+  socialLinks,
   skillGroups,
 } from "@/lib/site-content";
 import { SiteHeader } from "@/components/site-header";
@@ -29,7 +30,7 @@ const experienceLogoMap = {
 export default function Home() {
   return (
     <>
-      <SiteHeader navItems={navItems} />
+      <SiteHeader navItems={navItems} socialLinks={socialLinks} />
       <main className="mx-auto w-full max-w-[1180px] px-4 pb-16 pt-8 sm:px-6 md:pt-10">
         <section id="home" className="mb-14 scroll-mt-28 md:mb-24">
           <Card>

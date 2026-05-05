@@ -1,3 +1,5 @@
+import { SOCIAL_PROFILE_LABELS, SOCIAL_PROFILE_URLS } from "@/lib/constants";
+
 export const navItems = [
   { id: "home", label: "Home" },
   { id: "experience", label: "Experience" },
@@ -5,6 +7,19 @@ export const navItems = [
   { id: "skills", label: "Skills" },
   { id: "education", label: "Education" },
   { id: "contact", label: "Contact" },
+] as const;
+
+export const socialLinks = [
+  {
+    id: "linkedin",
+    label: SOCIAL_PROFILE_LABELS.LINKEDIN,
+    href: SOCIAL_PROFILE_URLS.LINKEDIN,
+  },
+  {
+    id: "github",
+    label: SOCIAL_PROFILE_LABELS.GITHUB,
+    href: SOCIAL_PROFILE_URLS.GITHUB,
+  },
 ] as const;
 
 /** Burlington Photo Booth — public site and social */

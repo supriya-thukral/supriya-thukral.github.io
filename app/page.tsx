@@ -239,13 +239,13 @@ export default function Home() {
                       ) : null}
                     </div>
                     {item.title in experienceLogoMap ? (
-                      <div className="hidden shrink-0 overflow-hidden rounded-lg border border-(--color-border) bg-white p-1 sm:block">
+                      <div className="hidden shrink-0 overflow-hidden rounded-xl border border-(--color-border) bg-white p-2 sm:block">
                         <Image
                           src={experienceLogoMap[item.title as keyof typeof experienceLogoMap]}
                           alt={`${item.title.split(",")[1]?.trim() ?? item.title} logo`}
-                          width={52}
-                          height={52}
-                          className="h-11 w-11 object-contain"
+                          width={72}
+                          height={72}
+                          className="h-14 w-14 object-contain sm:h-16 sm:w-16"
                         />
                       </div>
                     ) : null}

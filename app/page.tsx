@@ -24,7 +24,7 @@ import Image from "next/image";
 const experienceLogoMap = {
   "Full-Stack Software Developer (Lead Frontend), Rubicon": "/images/Rubicon.png",
   "Full-Stack Software Developer, Forma.ai": "/images/FormaLogo.png",
-  "Director of Sponsorship, DeltaHacks": "/images/Deltahacks.png",
+  "VP of Sponsorship, DeltaHacks": "/images/Deltahacks.png",
 } as const;
 
 export default function Home() {
@@ -61,7 +61,7 @@ export default function Home() {
                       <div className="h-16 w-16 overflow-hidden rounded-full border border-(--color-border) bg-white">
                         <Image
                           src="/images/SupriyaThukral.jpg"
-                          alt="Portrait of Supriya Thukral, product-minded software developer"
+                          alt="Portrait of Supriya Thukral"
                           className="h-full w-full object-cover"
                           width={64}
                           height={64}
@@ -70,10 +70,10 @@ export default function Home() {
                       </div>
                       <div>
                         <p className="text-sm font-semibold text-(--color-text)">
-                          Builder Snapshot
+                          Professional Snapshot
                         </p>
                         <p className="text-sm text-(--color-text-muted)">
-                          Workflow tools & operator insight
+                          Technology, business & communications
                         </p>
                       </div>
                     </div>
@@ -81,22 +81,22 @@ export default function Home() {
                     <div className="space-y-3 text-sm">
                       <div>
                         <p className="text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-(--color-accent)">
-                          Currently building
+                          Previous product project
                         </p>
                         <p className="font-semibold text-(--color-text)">Parva</p>
                         <p className="text-(--color-text-secondary)">
-                          Pre-launch CRM for creative service businesses
+                          CRM for creative service businesses
                         </p>
                       </div>
                       <div>
                         <p className="text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-(--color-accent)">
-                          Operator insight
+                          Current business
                         </p>
                         <p className="font-semibold text-(--color-text)">
                           Burlington Photo Booth
                         </p>
                         <p className="text-(--color-text-secondary)">
-                          Client intake, packages, timelines, and gallery delivery
+                          75+ events supported in 2026 through November
                         </p>
                         <p className="mt-2 flex flex-wrap gap-x-3 gap-y-1">
                           <a
@@ -121,11 +121,11 @@ export default function Home() {
                       </div>
                       <div>
                         <p className="text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-(--color-accent)">
-                          Product focus
+                          Professional focus
                         </p>
-                        <p className="font-semibold text-(--color-text)">Workflow clarity</p>
+                        <p className="font-semibold text-(--color-text)">People, products & operations</p>
                         <p className="text-(--color-text-secondary)">
-                          Turning messy operations into usable tools
+                          Creating clear, useful experiences
                         </p>
                       </div>
                     </div>
@@ -138,7 +138,7 @@ export default function Home() {
 
         <section className="mb-14 scroll-mt-28 md:mb-24" id="about">
           <p className="section-label mb-3">About</p>
-          <h2 className="mb-5 text-[clamp(2rem,3vw,3.2rem)] leading-none">How I Build</h2>
+          <h2 className="mb-5 text-[clamp(2rem,3vw,3.2rem)] leading-none">How I Work</h2>
           <Card>
             <CardContent className="space-y-6 p-7 pt-7 lg:p-10">
               {aboutParagraphs.map((paragraph) => (
@@ -183,7 +183,7 @@ export default function Home() {
 
         <section id="experience" className="mb-14 scroll-mt-28 md:mb-24">
           <p className="section-label mb-3">Experience</p>
-          <h2 className="mb-5 text-[clamp(2rem,3vw,3.2rem)] leading-none">What I&apos;ve Built</h2>
+          <h2 className="mb-5 text-[clamp(2rem,3vw,3.2rem)] leading-none">Professional Experience</h2>
           <div className="space-y-5">
             {experienceItems.map((item) => (
               <Card
@@ -266,14 +266,14 @@ export default function Home() {
                       <li key={bullet}>{bullet}</li>
                     ))}
                   </ul>
-                  {"currentFocus" in item && item.currentFocus ? (
+                  {"projectFocus" in item && item.projectFocus ? (
                     <p className="text-sm leading-6 text-(--color-text-secondary)">
-                      <span className="font-semibold text-(--color-text)">Current focus:</span>{" "}
-                      {item.currentFocus}
+                      <span className="font-semibold text-(--color-text)">Project focus:</span>{" "}
+                      {item.projectFocus}
                     </p>
                   ) : null}
                   <div className="rounded-xl border border-(--color-border) bg-(--color-bg-soft) px-3.5 py-3 text-[0.92rem] text-(--color-text)">
-                    <span className="font-semibold">Product lens:</span>{" "}
+                    <span className="font-semibold">What I learned:</span>{" "}
                     <span className="text-(--color-text-secondary)">{item.productLens}</span>
                   </div>
                   {"tags" in item && item.tags ? (
@@ -312,7 +312,7 @@ export default function Home() {
                 <CardContent className="flex flex-1 flex-col gap-4">
                   <p className="text-sm leading-6 text-(--color-text-secondary)">
                     <span className="font-semibold text-(--color-text)">
-                      Product problem:
+                      Challenge:
                     </span>{" "}
                     {project.problem}
                   </p>
@@ -322,7 +322,7 @@ export default function Home() {
                   </p>
                   <p className="text-sm leading-6 text-(--color-text-secondary)">
                     <span className="font-semibold text-(--color-text)">
-                      Decision/tradeoff:
+                      Approach:
                     </span>{" "}
                     {project.decisionTradeoff}
                   </p>
@@ -416,8 +416,7 @@ export default function Home() {
           <Card>
             <CardContent className="space-y-4 p-7 pt-7 lg:p-10">
               <p className="prose-copy">
-                Interested in product, AI-assisted building, and tools that make real
-                business workflows clearer.
+                Interested in technology, product, communications, and building meaningful experiences for businesses and communities.
               </p>
               <Button variant="outline" asChild className="w-fit">
                 <a href="mailto:hello@supriyathukral.com">hello@supriyathukral.com</a>

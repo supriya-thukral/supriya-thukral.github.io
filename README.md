@@ -2,20 +2,20 @@
 
 Hi, I’m Supriya, a product-minded software developer and small business owner building tools for real workflows.
 
-My work sits at the intersection of software, product thinking, and operations. I’ve built workflow tools for public safety teams, internal platform tools for SaaS teams, and I’m currently building Parva, a pre-launch CRM for creative service businesses.
+My work sits at the intersection of software, product thinking, and operations. I’ve built workflow tools for public safety teams, internal platform tools for SaaS teams, and developed Parva, a CRM project for creative service businesses. My background also includes events, research communications, sponsorships and photography.
 
 ## About Me
 
 - Product-minded full-stack developer with experience across SaaS, public safety, and creative business operations
-- Founder & Product Engineer of Parva, a pre-launch CRM for creative service businesses
+- Founder & Product Engineer of Parva, a previous CRM project for creative service businesses (2025–2026)
 - Co-Founder & Small Business Owner of Burlington Photo Booth
 - Interested in product, AI-assisted building, workflow design, and tools that make real business operations clearer
 
-## What I’m Building
+## Selected Projects
 
 ### Parva
 
-Parva is a pre-launch CRM for creative service businesses. It is designed to centralize client intake, project communication, and file delivery in one place.
+Parva was a CRM project for creative service businesses, designed to centralize client intake, project communication and file delivery.
 
 The product is shaped by firsthand experience running a service business and seeing how quickly client details, notes, files, follow-ups, and communication can become scattered across tools.
 
@@ -67,7 +67,26 @@ June 2023 – Present
 
 - Run a premium photo booth business serving weddings, corporate events, galas, schools, and private celebrations
 - Manage client intake, proposals, contracts, timelines, event logistics, vendor communication, and gallery delivery
-- Use firsthand business operations to inform product decisions for Parva
+- Supported 75+ events in 2026 through November and managed website content, digital marketing and client communications
+
+### Spark — McMaster University
+
+Events and Communications Assistant | Sep 2020 – Sep 2021
+
+- Produced newsletters, digital content, promotional graphics and coordinated research talks and workshops
+- Managed speaker outreach, virtual event logistics and documented repeatable workflows
+
+### Chasing Moments
+
+Owner & Lead Photographer | Dec 2015 – Dec 2023
+
+- Operated a wedding photography business, managing client communications, event timelines, digital marketing and photo delivery
+
+### DeltaHacks
+
+VP of Sponsorship | Jun 2021 – May 2022
+
+- Secured $20,000+ in sponsorships and led partner outreach
 
 ## Skills
 

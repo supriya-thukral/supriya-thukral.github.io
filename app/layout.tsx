@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Supriya Thukral | Product-Minded Software Developer",
+  title: "Supriya Thukral | Software, Business & Communications",
   description:
-    "Product-minded software developer, 0-to-1 builder, and small business owner building workflow tools across SaaS, public safety, and creative business operations.",
+    "Software developer, entrepreneur and creative professional with experience in product development, events, digital communications and business operations.",
 };
 
 export default function RootLayout({

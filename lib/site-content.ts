@@ -28,30 +28,53 @@ export const BURLINGTON_PHOTO_BOOTH_INSTAGRAM_URL =
   "https://www.instagram.com/burlingtonphotobooth/" as const;
 
 export const heroContent = {
-  title: "Product-minded software developer building tools for real workflows.",
+  title: "Building products, businesses and meaningful experiences.",
   subtitle:
-    "I’m Supriya, a full-stack software developer and small business owner building workflow tools across SaaS, public safety, and creative business operations. I focus on turning messy, real-world processes into clear product experiences.",
+    "I’m Supriya, a software developer, entrepreneur and creative professional with experience in technology, communications and business operations. I enjoy solving real-world problems, whether through software, digital experiences or bringing people together.",
   chips: [
     "0-to-1 product builder",
     "Small business operator",
-    "Full-stack execution",
-    "AI-assisted building",
+    "Events & communications",
+    "Full-stack & AI development",
   ],
 };
 
 export const aboutParagraphs = [
   "My path into product has been hands-on. At Rubicon, I built workflow tools for public safety teams working in complex, high-pressure environments. Through Burlington Photo Booth and my previous wedding photography business, I learned what it feels like to run a small business, sell online, explain an offer clearly, manage customers, and deal with messy operations behind the scenes.",
-  "I’m now building Parva, a pre-launch CRM for creative service businesses, to bring those experiences together. The product is shaped by real workflow pain: scattered client details, manual follow-ups, disconnected files, and communication spread across too many tools.",
+  "Before working in software, I coordinated research events and communications at Spark, McMaster University, and led sponsorship outreach for DeltaHacks. I later brought my service-business experience into Parva, a CRM project for creative businesses. Across these roles, I have enjoyed building practical systems, communicating clearly and working with people.",
 ];
 
 export const experienceItems = [
   {
+    label: "Small Business Operations",
+    title: "Co-Founder & Small Business Owner, Burlington Photo Booth",
+    subtitle: "Premium event photo booth business | June 2023 – Present",
+    description:
+      "Operate a premium photo booth business serving weddings, corporate events, galas, schools, and private celebrations across Southern Ontario.",
+    bullets: [
+      "Supported 75+ corporate, community and private events in 2026 through November, coordinating timelines, staffing, equipment, venue logistics and gallery delivery.",
+      "Manage client and vendor communications, proposals, contracts and approvals through HoneyBook.",
+      "Create branded graphics, event photography, short-form videos and social content; manage website content, local SEO and digital marketing.",
+      "Supported events for organizations including Halton Healthcare, Emterra, Appleby College and Ramudden.",
+      "Built and refined service packages, add-ons, preferred venue perks, and client communication workflows to improve booking clarity and operational consistency.",
+      "Added clearer package information and built a package-fit tool to help clients understand active booth hours, paused time, customization, and total cost.",
+      "Translated firsthand business operations into Parva product decisions around client management, project workflows, communication history, and file delivery.",
+    ],
+    tags: ["Small business", "Customer empathy", "Workflow design"],
+    productLens:
+      "Learned that buyer friction often comes from uncertainty, not just price.",
+    relatedLinks: [
+      { label: "Website", href: BURLINGTON_PHOTO_BOOTH_URL },
+      { label: "Instagram", href: BURLINGTON_PHOTO_BOOTH_INSTAGRAM_URL },
+    ],
+  },
+  {
     label: "0-to-1 Product",
     title: "Founder & Product Engineer, Parva",
     subtitle:
-      "Pre-launch CRM for creative service businesses | March 2025 – Present",
+      "CRM project for creative service businesses | 2025 – 2026",
     description:
-      "Building a pre-launch CRM for creative service businesses to centralize client communication, project tracking, and file delivery. Owning product direction, MVP scoping, architecture, and implementation.",
+      "Developed a CRM prototype for creative service businesses to centralize client communication, project tracking and file delivery. Led product direction, MVP scoping, architecture and implementation.",
     bullets: [
       "Identified recurring workflow gaps in creative service businesses, including scattered client communication, project details, files, and follow-ups.",
       "Defined core product workflows for contacts, projects, client intake, threaded messaging, and asset delivery.",
@@ -61,7 +84,7 @@ export const experienceItems = [
     tags: ["Product thinking", "Workflow design", "AWS", "AI-assisted building"],
     productLens:
       "Turning firsthand service-business pain into a focused MVP, while choosing what to build now versus later.",
-    currentFocus: "Client intake, project communication, and file delivery workflows.",
+    projectFocus: "Client intake, project communication, and file delivery workflows.",
   },
   {
     label: "Shipped Workflow Tool",
@@ -82,26 +105,6 @@ export const experienceItems = [
       "Designed for a live-call environment where speed, clarity, and low cognitive load mattered.",
   },
   {
-    label: "Small Business Operations",
-    title: "Co-Founder & Small Business Owner, Burlington Photo Booth",
-    subtitle: "Premium event photo booth business | June 2023 – Present",
-    description:
-      "Operate a premium photo booth business serving weddings, corporate events, galas, schools, and private celebrations across Southern Ontario.",
-    bullets: [
-      "Manage client intake, proposals, contracts, timelines, event logistics, vendor communication, and gallery delivery.",
-      "Built and refined service packages, add-ons, preferred venue perks, and client communication workflows to improve booking clarity and operational consistency.",
-      "Added clearer package information and built a package-fit tool to help clients understand active booth hours, paused time, customization, and total cost.",
-      "Translated firsthand business operations into Parva product decisions around client management, project workflows, communication history, and file delivery.",
-    ],
-    tags: ["Small business", "Customer empathy", "Workflow design"],
-    productLens:
-      "Learned that buyer friction often comes from uncertainty, not just price.",
-    relatedLinks: [
-      { label: "Website", href: BURLINGTON_PHOTO_BOOTH_URL },
-      { label: "Instagram", href: BURLINGTON_PHOTO_BOOTH_INSTAGRAM_URL },
-    ],
-  },
-  {
     label: "Internal Platform Tools",
     title: "Full-Stack Software Developer, Forma.ai",
     subtitle: "Sales compensation platform | May 2022 – Aug 2023",
@@ -117,15 +120,43 @@ export const experienceItems = [
       "Built internal tools that reduced dependency on engineering and helped teams move faster.",
   },
   {
+    label: "Events & Communications",
+    title: "Events and Communications Assistant, Spark — McMaster University",
+    subtitle: "Faculty of Social Sciences | Sep 2020 – Sep 2021",
+    description:
+      "Supported research communications, community outreach and event programming during the centre’s transition from CRESS to Spark.",
+    bullets: [
+      "Produced biweekly newsletters in Mailchimp, maintained website and social media content, and created promotional graphics and video content.",
+      "Coordinated speaker outreach, event scheduling, registration and virtual event logistics; supported a workshop series that reached 560 attendees during the 2020–2021 reporting year.",
+      "Contributed to the annual report, documented event workflows and trained incoming staff on communications processes.",
+    ],
+    tags: ["Mailchimp", "Canva", "Event coordination", "Digital communications"],
+    productLens: "Used clear communications and repeatable workflows to make research events easier to discover and deliver.",
+  },
+  {
+    label: "Creative Entrepreneurship",
+    title: "Owner & Lead Photographer, Chasing Moments",
+    subtitle: "Wedding photography business | Dec 2015 – Dec 2023",
+    description: "Built and operated a wedding photography business serving couples and families across Ontario.",
+    bullets: [
+      "Managed inquiries, bookings, contracts, event timelines, photography and gallery delivery.",
+      "Built an online presence across the website, Instagram and Facebook; used CRM and social media tools to support marketing and client communication.",
+      "Expanded services to include videography and refined packages based on client needs.",
+    ],
+    tags: ["Photography", "Lightroom", "Visual storytelling", "Digital marketing"],
+    productLens: "Learned how client experience, clear expectations and visual storytelling build trust.",
+  },
+  {
     label: "Earlier Leadership",
-    title: "Director of Sponsorship, DeltaHacks",
-    subtitle: "McMaster annual hackathon",
+    title: "VP of Sponsorship, DeltaHacks",
+    subtitle: "McMaster annual hackathon | Jun 2021 – May 2022",
     description:
       "Led sponsorship operations for McMaster’s annual hackathon during a fully remote event.",
     bullets: [
       "Secured $20,000+ in sponsorships.",
       "Built repeatable outreach and partner communication workflows.",
       "Led a distributed student team.",
+      "Additional community leadership: President, McMaster Observatory Outreach at Night; VP of Knowledge Translation Committee, COPE McMaster.",
     ],
     tags: ["Operations", "Partnerships", "Leadership"],
     productLens: "Built repeatable systems under constraints with limited resources.",
@@ -136,7 +167,24 @@ export const experienceItems = [
 
 export const projects = [
   {
-    label: "Product in progress",
+    label: "Research communications",
+    title: "Spark — Research Events & Outreach",
+    problem: "Researchers and community members needed accessible ways to discover events and engage with social research.",
+    built: "Newsletter campaigns, digital content, promotional graphics and repeatable speaker and event coordination workflows.",
+    decisionTradeoff: "Combined clear communication with practical event processes; the centre’s workshop series reached 560 attendees during the 2020–2021 reporting year.",
+    tags: ["Communications", "Mailchimp", "Events", "Community outreach"],
+  },
+  {
+    label: "Business operations",
+    title: "Burlington Photo Booth",
+    problem: "Event clients need reliable coordination, a clear booking process and a polished guest experience.",
+    built: "Client workflows, branded event experiences, digital marketing and venue relationships supporting 75+ events in 2026 through November.",
+    decisionTradeoff: "Standardized the operational process while preserving personalized creative details for each event.",
+    tags: ["Events", "Entrepreneurship", "CRM", "Digital marketing"],
+    relatedLinks: [{ label: "Website", href: BURLINGTON_PHOTO_BOOTH_URL }, { label: "Instagram", href: BURLINGTON_PHOTO_BOOTH_INSTAGRAM_URL }],
+  },
+  {
+    label: "Previous CRM project",
     title: "Parva",
     problem:
       "Creative service businesses often manage client details, messages, files, and follow-ups across too many places.",
@@ -190,6 +238,14 @@ export const projects = [
 ] as const;
 
 export const skillGroups = [
+  {
+    title: "Marketing & Communications",
+    skills: ["Mailchimp", "Canva", "Adobe Lightroom", "WordPress", "SEO", "Newsletter production", "Social media", "Photography & video"],
+  },
+  {
+    title: "Events & Business Operations",
+    skills: ["Event logistics", "HoneyBook CRM", "Vendor relations", "Sponsorship outreach", "Stakeholder engagement", "Client experience"],
+  },
   {
     title: "Product Judgment",
     skills: [
